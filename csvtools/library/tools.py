@@ -73,12 +73,13 @@ def find_in_parents(file):
     return os.path.abspath(file)
 
 def load_config(file = "config.ini"):
-    '''Get/load command parameters
+    '''
 
     Args:
+        file: The config filename
 
     Returns:
-        arguments: A dictionary of lists of the options passed by the user
+        config: The parsed configuration
     '''
     config = configparser.ConfigParser()
     find_in_parents(file)
@@ -154,35 +155,28 @@ def combine_csvs(sources, destination):
         for row in combined_lines:
             output_file.write(f"{row}\n")
 
-def print_csv(source):
-    '''Get/load command parameters
+def print_csv(filepath):
+    '''
 
     Args:
+        filepath: the filepath of the csv
 
     Returns:
-        arguments: A dictionary of lists of the options passed by the user
+        False: Failed operation
     '''
-    csv_raw = None
-    if os.path.isfile(source):
-        csv_raw = csv.DictReader(open(source, encoding='utf-8'))
+    if not os.path.isfile(filepath): return False
 
+    csv_raw = csv.DictReader(open(filepath, encoding='utf-8'))
     for row in csv_raw:
         print(row)
 
-def print_longest(source):
-    '''Get/load command parameters
+def print_longest(filepath):
+    if not os.path.isfile(filepath): return False
 
-    Args:
-
-    Returns:
-        arguments: A dictionary of lists of the options passed by the user
-    '''
-    if not os.path.isfile(source): return False
-
-    csv_raw = csv.DictReader(open(source, encoding=get_encoding_type(source).lower()))
-
+    csv_raw = csv.DictReader(open(filepath, encoding=get_encoding_type(filepath).lower()))
     longest_key = 0
     longests = {}
+
     for row in csv_raw:
         for k, v in row.items():
             klen = len(k)
@@ -207,12 +201,13 @@ def get_encoding_type(file):
         return chardet.detect(f.read())['encoding']
 
 def transcode(source, destination):
-    '''Get/load command parameters
+    '''
 
     Args:
+        source      : The source filepath
+        destination : The destination filepath
 
     Returns:
-        arguments: A dictionary of lists of the options passed by the user
     '''
     print(f"Transcoding to utf-8: {source}")
     document = open(os.path.join(source), mode='r', encoding=get_encoding_type(source).lower()).read()
@@ -221,12 +216,13 @@ def transcode(source, destination):
     open(os.path.join(destination), mode='w', encoding='utf-8').write(document)
 
 def move_all_files(source, destination):
-    '''Get/load command parameters
+    '''
 
     Args:
+        source      : The source filepath
+        destination : The destination filepath
 
     Returns:
-        arguments: A dictionary of lists of the options passed by the user
     '''
     for file_name in os.listdir(source):
         file_from = os.path.join(source, file_name)
@@ -236,11 +232,12 @@ def move_all_files(source, destination):
             print('Moved:', file_name)
 
 def test01(source = None, destination = None):
-    '''Get/load command parameters
+    '''
 
     Args:
+        source      : The source filepath
+        destination : The destination filepath
 
     Returns:
-        arguments: A dictionary of lists of the options passed by the user
     '''
     print("Testing! Testing!")
