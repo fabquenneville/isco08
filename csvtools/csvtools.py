@@ -26,7 +26,7 @@ def main():
         transcode(source, destination)
     elif arguments['task'] == "combine":
         combine_csvs(sources, destination)
-    elif arguments['task'] == "print_longest":
+    elif arguments['task'] == "print_longest" and source:
         print_longest(source)
     elif arguments['task'] == "test":
         test01(source, destination)

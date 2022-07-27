@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Manual &#8212; csvtranslator  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/alabaster.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Use cases" href="use_cases.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="manual">
+<h1>Manual<a class="headerlink" href="#manual" title="Permalink to this heading">¶</a></h1>
+<section id="name">
+<h2>Name<a class="headerlink" href="#name" title="Permalink to this heading">¶</a></h2>
+<p>csvtools</p>
+</section>
+<section id="synopsis">
+<h2>Synopsis<a class="headerlink" href="#synopsis" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>csvtools <span class="o">[</span>-task:print,print_longest,translate,transcode,combine<span class="o">]</span> <span class="o">[</span>-lang_from:en,fr,...<span class="o">]</span> <span class="o">[</span>-lang_to:en,fr,...<span class="o">]</span> <span class="o">[</span>-keys_from:<span class="o">[</span>,<span class="o">]]</span> <span class="o">[</span>-keys_to:<span class="o">[</span>,<span class="o">]]</span> <span class="o">[</span>-source:<span class="o">]</span> <span class="o">[</span>-sources:<span class="o">[</span>,<span class="o">]]</span> <span class="o">[</span>-destination:<span class="o">]</span>
+</pre></div>
+</div>
+<p>** Warning an empty destination will output in the source and replace it **</p>
+<p>default options are:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>-lang_to:en
+-destination:source
+</pre></div>
+</div>
+</section>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this heading">¶</a></h2>
+<p>csvtools is a Python command line tool to manipulate csv files.</p>
+<ul class="simple">
+<li><p>Print</p></li>
+<li><p>Translate columns</p></li>
+<li><p>Combine csv files</p></li>
+<li><p>…</p></li>
+</ul>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading">¶</a></h2>
+<section id="task">
+<h3>-task:<a class="headerlink" href="#task" title="Permalink to this heading">¶</a></h3>
+<p>[print,print_longest,translate,transcode,combine]</p>
+<p>Transcode will output random encoding to utf-8</p>
+</section>
+<section id="lang-from">
+<h3>-lang_from:<a class="headerlink" href="#lang-from" title="Permalink to this heading">¶</a></h3>
+<p>The language to translate from: en,fr,es,…</p>
+</section>
+<section id="lang-to">
+<h3>-lang_to:<a class="headerlink" href="#lang-to" title="Permalink to this heading">¶</a></h3>
+<p>The language to translate to: en,fr,es,…</p>
+</section>
+<section id="keys-from">
+<h3>-keys_from:<a class="headerlink" href="#keys-from" title="Permalink to this heading">¶</a></h3>
+<p>A csv list of the keys to translate from.</p>
+</section>
+<section id="keys-to">
+<h3>-keys_to:<a class="headerlink" href="#keys-to" title="Permalink to this heading">¶</a></h3>
+<p>A csv list of the keys to translate to.</p>
+</section>
+<section id="source">
+<h3>-source:<a class="headerlink" href="#source" title="Permalink to this heading">¶</a></h3>
+<p>A filepath to a csv file.</p>
+</section>
+<section id="sources">
+<h3>-sources:<a class="headerlink" href="#sources" title="Permalink to this heading">¶</a></h3>
+<p>A csv list of filepaths to csv files.</p>
+</section>
+<section id="destination">
+<h3>-destination:<a class="headerlink" href="#destination" title="Permalink to this heading">¶</a></h3>
+<p>A filepath to output to.</p>
+<p>See <a class="reference internal" href="warnings.html"><span class="doc">Warnings</span></a></p>
+</section>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this heading">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Add a translated column to a csv file</span>
+./csvtools/csvtools.py -task:translate -source:~/Documents/titles_english.csv -destination:~/Documents/titles.csv -lang_from:en -lang_to:fr -keys_from:name_english -keys_to:name_french
+
+<span class="c1"># Combine two csv files</span>
+./csvtools/csvtools.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
+</pre></div>
+</div>
+<p>More examples in <a class="reference internal" href="use_cases.html"><span class="doc">Use cases</span></a></p>
+</section>
+<section id="see-also">
+<h2>See Also<a class="headerlink" href="#see-also" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://ffmpeg.org/">FFmpeg</a></p>
+</section>
+<section id="author">
+<h2>Author<a class="headerlink" href="#author" title="Permalink to this heading">¶</a></h2>
+<p>Fabrice Quenneville</p>
+</section>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<h1 class="logo"><a href="../index.html">csvtranslator</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Usage:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="warnings.html">Warnings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Manual</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#name">Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#synopsis">Synopsis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#options">Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-also">See Also</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#author">Author</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="use_cases.html">Use cases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="errors.html">Errors</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Release Notes:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../releasenotes/0.0.1-changelog.html">0.0.1 Release Notes</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="quickstart.html" title="previous chapter">Quickstart</a></li>
+      <li>Next: <a href="use_cases.html" title="next chapter">Use cases</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2020, Fabrice Quenneville.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/usage/manual.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

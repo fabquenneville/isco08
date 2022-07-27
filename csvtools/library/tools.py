@@ -170,31 +170,37 @@ def print_csv(filepath):
     for row in csv_raw:
         print(row)
 
-def print_longest(filepath):
-    if not os.path.isfile(filepath): return False
+def print_longest(path):
+    if os.path.isdir(path):
+        for filename in os.listdir(path):
+            if filename.endswith('.csv'):
+                print_longest(os.path.join(path, filename))
+    else:
+        if not os.path.isfile(path): return False
+        csv_raw = csv.DictReader(open(path, encoding=get_encoding_type(path).lower()))
+        longest_key = 0
+        longests = {}
 
-    csv_raw = csv.DictReader(open(filepath, encoding=get_encoding_type(filepath).lower()))
-    longest_key = 0
-    longests = {}
+        for row in csv_raw:
+            for k, v in row.items():
+                klen = len(k)
+                if klen > longest_key:
+                    longest_key = klen
 
-    for row in csv_raw:
-        for k, v in row.items():
-            klen = len(k)
-            if klen > longest_key:
-                longest_key = klen
+                vlen = len(v)
+                if k not in longests:
+                    longests[k] = vlen
+                elif vlen > longests[k]:
+                    longests[k] = vlen
 
-            vlen = len(v)
-            if k not in longests:
-                longests[k] = vlen
-            elif vlen > longests[k]:
-                longests[k] = vlen
-
-    longest_key += 5
-    t1 = "Column"
-    t2 = "Length"
-    print(f"{t1:{longest_key}} | {t2}")
-    for k, v in longests.items():
-        print(f"{k:{longest_key}} | {v}")
+        longest_key += 5
+        t1 = "Column"
+        t2 = "Length"
+        print(f"Longuest values in {path}:")
+        print(f"{t1:{longest_key}} | {t2}")
+        for k, v in longests.items():
+            print(f"{k:{longest_key}} | {v}")
+        print()
 
 def get_encoding_type(file):
     with open(file, 'rb') as f:

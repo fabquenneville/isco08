@@ -1,0 +1,46 @@
+===================
+0.0.1 Release Notes
+===================
+
+This release has been tested on Python 3.7 - 3.9
+
+
+Highlights
+==========
+
+First release, implemented the following features:
+
+* Print
+* Translate columns
+* Combine files
+
+Dropped Support
+===============
+
+Future Changes
+==============
+
+* Detect language
+* Multiple translation engines
+* Improvements to argos init
+* ...
+
+Compatibility notes
+===================
+
+OS Support
+----------
+
+This release has been tested to work on various GNU/Linux distributions
+
+New Features
+============
+
+Improvements
+============
+
+Changes
+=======
+
+Deprecations
+============
