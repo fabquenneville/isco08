@@ -177,9 +177,9 @@ def print_longest(source):
     Returns:
         arguments: A dictionary of lists of the options passed by the user
     '''
-    csv_raw = None
-    if os.path.isfile(source):
-        csv_raw = csv.DictReader(open(source, encoding='utf-8'))
+    if not os.path.isfile(source): return False
+
+    csv_raw = csv.DictReader(open(source, encoding=get_encoding_type(source).lower()))
 
     longest_key = 0
     longests = {}
@@ -202,14 +202,11 @@ def print_longest(source):
     for k, v in longests.items():
         print(f"{k:{longest_key}} | {v}")
 
-
-
 def get_encoding_type(file):
     with open(file, 'rb') as f:
-        rawdata = f.read()
-    return chardet.detect(rawdata)['encoding']
+        return chardet.detect(f.read())['encoding']
 
-def transcode(source = None, destination = None):
+def transcode(source, destination):
     '''Get/load command parameters
 
     Args:
@@ -217,26 +214,11 @@ def transcode(source = None, destination = None):
     Returns:
         arguments: A dictionary of lists of the options passed by the user
     '''
-    print("Transcoding originals to utf-8.")
-    if not source       : source = "originals"
-    if not destination  : destination = "transcoded"
-
-    availables = {
-        "continu_transfos"  : "ContinuationsTransformations.csv",
-        "dom_valeurs"       : "DomaineValeur.csv",
-        "entreprises"       : "Entreprise.csv",
-        "etablissements"    : "Etablissements.csv",
-        "fusions_scissions" : "FusionScissions.csv",
-        "noms"              : "Nom.csv"
-    }
-    
-    datapath = find_in_parents('data')
-
-    for key, value in availables.items():
-        document = open(os.path.join(datapath, source, value), mode='r', encoding='utf-8-sig').read()
-        document = document.encode(encoding = 'utf-8', errors = 'strict').decode(encoding = 'utf-8', errors = 'strict')
-        document = document.replace(u"\u00a0", " ")
-        open(os.path.join(datapath, destination, value), mode='w', encoding='utf-8').write(document)
+    print(f"Transcoding to utf-8: {source}")
+    document = open(os.path.join(source), mode='r', encoding=get_encoding_type(source).lower()).read()
+    document = document.encode(encoding = 'utf-8', errors = 'strict').decode(encoding = 'utf-8', errors = 'strict')
+    document = document.replace(u"\u00a0", " ")
+    open(os.path.join(destination), mode='w', encoding='utf-8').write(document)
 
 def move_all_files(source, destination):
     '''Get/load command parameters
