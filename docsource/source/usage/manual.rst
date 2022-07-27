@@ -5,64 +5,83 @@ Manual
 Name
 ----
 
-csvtools
+csvtranslator
 
 Synopsis
 --------
 
 .. code-block:: bash
 
-    csvtools [foo,bar] [-del] [-foo:foo,bar] [-bar:foo,bar]
+    csvtranslator [-task:print,translate,transcode,combine] [-lang_from:en,fr,...] [-lang_to:en,fr,...] [-keys_from:[,]] [-keys_to:[,]] [-source:] [-sources:[,]] [-destination:]
 
-** Warning dont do this other thing **
+** Warning an empty destination will output in the source and replace it **
 
 default options are:
 
 .. code-block:: bash
 
-    -foo:foo
-    -bar:
+    -lang_to:en
+    -destination:source
 
 Description
 -----------
 
-csvtools is a Python command line tool to do that.
+csvtranslator is a Python command line tool to manipulate csv files.
 
-* Do this
-* Do that
+* Print
+* Translate columns
+* Combine csv files
+* ...
 
 Options
 -------
 
-foo
-====
-Search and list videos filtered by the parameters passed by the user.
+-task:
+======
+[print,translate,transcode,combine]
 
-convert
-=======
-Do this
+Transcode will output random encoding to utf-8
 
--del:
-=====
-Delete all of this.
+-lang_from:
+===========
+The language to translate from: en,fr,es,...
+
+-lang_to:
+=========
+The language to translate to: en,fr,es,...
+
+-keys_from:
+===========
+A csv list of the keys to translate from.
+
+-keys_to:
+=========
+A csv list of the keys to translate to.
+
+-source:
+========
+A filepath to a csv file.
+
+-sources:
+=========
+A csv list of filepaths to csv files.
+
+-destination:
+=============
+A filepath to output to.
 
 See :doc:`warnings`
-
--foo:
-=====
-[foo,bar]
-
-This command does something
 
 Examples
 --------
 
 .. code-block:: bash
 
-    # Do this
-    csvtools foo -del -foo:bar -bar:foo
-    # Do that
-    csvtools bar -foo:foo
+    # Add a translated column to a csv file
+    ./csvtranslator/csvtranslator.py -task:translate -source:~/Documents/titles_english.csv -destination:~/Documents/titles.csv -lang_from:en -lang_to:fr -keys_from:name_english -keys_to:name_french
+
+    # Combine two csv files
+    ./csvtranslator/csvtranslator.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
 
 More examples in :doc:`use_cases`
 

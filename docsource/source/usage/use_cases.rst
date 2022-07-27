@@ -2,30 +2,30 @@
 Use cases
 =========
 
-The main reasons to use csvtools would be the following:
+The main reasons to use csvtranslator would be the following:
 
-* :ref:`cmd1` do this:
-* :ref:`cmd2` do that:
+* :ref:`translate` do this:
+* :ref:`combine` do that:
 
-.. _cmd1:
+.. _translate:
 
-Do this
--------
+Add a translated column to a csv file
+-------------------------------------
 
-By running this command you can do this:
+By running this command you can add a translated column to a csv file:
 
 .. code-block:: bash
 
-    csvtools option -foo:bar -dirs:/mnt/foo/
+    ./csvtranslator/csvtranslator.py -task:translate -source:~/Documents/titles_english.csv -destination:~/Documents/titles.csv -lang_from:en -lang_to:fr -keys_from:name_english -keys_to:name_french
 
-.. _cmd2:
+.. _combine:
 
 Do that
 -------
 
-By running that command you can do that:
+By running that command you can combine two csv files:
 
 .. code-block:: bash
 
-    csvtools option -bar:foo -dirs:/mnt/foo/
+    ./csvtranslator/csvtranslator.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
 

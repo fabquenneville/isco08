@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'csvtools'
+project = 'csvtranslator'
 copyright = '2020, Fabrice Quenneville'
 author = 'Fabrice Quenneville'
 version = '0.0.1'

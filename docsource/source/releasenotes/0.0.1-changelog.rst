@@ -10,8 +10,9 @@ Highlights
 
 First release, implemented the following features:
 
-* Do this
-* Do that
+* Print
+* Translate columns
+* Combine files
 
 Dropped Support
 ===============
@@ -19,8 +20,10 @@ Dropped Support
 Future Changes
 ==============
 
-* Do this
-* Do that
+* Detect language
+* Multiple translation engines
+* Improvements to argos init
+* ...
 
 Compatibility notes
 ===================

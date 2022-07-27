@@ -1,18 +1,20 @@
-.. csvtools documentation master file, created by
+.. csvtranslator documentation master file, created by
    sphinx-quickstart on Fri Nov 20 22:46:06 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-=======================================
-Welcome to csvtools's documentation!
-=======================================
+=========================================
+Welcome to csvtranslator's documentation!
+=========================================
 
-csvtools is a Python command line tool to do this and that.
+csvtranslator is a Python command line tool to manipulate csv files.
 
-* Do this
-* Do that
+* Print
+* Translate columns
+* Combine csv files
+* ...
 
-The source code can be found on `GitHub <https://github.com/fabquenneville/csvtools>`_
+The source code can be found on `GitHub <https://github.com/fabquenneville/csvtranslator>`_
 
 .. toctree::
    :maxdepth: 2

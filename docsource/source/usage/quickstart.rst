@@ -4,24 +4,25 @@ Quickstart
 
 .. code-block:: bash
 
-    csvtools [foo,bar] [-del] [-foo:foo,bar] [-bar:foo,bar]
+    csvtranslator [-task:print,translate,transcode,combine] [-lang_from:en,fr,...] [-lang_to:en,fr,...] [-keys_from:[,]] [-keys_to:[,]] [-source:] [-sources:[,]] [-destination:]
 
-** Warning dont do this other thing **
+** Warning an empty destination will output in the source and replace it **
 
 default options are:
 
 .. code-block:: bash
 
-    -foo:foo
-    -bar:
+    -lang_to:en
+    -destination:source
 
 Examples:
 
 .. code-block:: bash
 
-    # Do this
-    csvtools foo -del -foo:bar -bar:foo
-    # Do that
-    csvtools bar -foo:foo
+    # Add a translated column to a csv file
+    ./csvtranslator/csvtranslator.py -task:translate -source:~/Documents/titles_english.csv -destination:~/Documents/titles.csv -lang_from:en -lang_to:fr -keys_from:name_english -keys_to:name_french
+
+    # Combine two csv files
+    ./csvtranslator/csvtranslator.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
 
 More examples in :doc:`use_cases`
