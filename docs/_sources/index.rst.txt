@@ -15,7 +15,7 @@ csvtools is a Python command line tool to manipulate csv files.
 * Combine csv files
 * ...
 
-The source code can be found on `GitHub <https://github.com/fabquenneville/csvtools>`_
+The source code can be found on `GitHub <https://fabquenneville.github.io/csvtools/>`_
 
 .. toctree::
    :maxdepth: 2

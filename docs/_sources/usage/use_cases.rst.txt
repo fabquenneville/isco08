@@ -32,12 +32,15 @@ By running this command you can add a translated column to a csv file:
     ./csvtools/csvtools.py -task:print_longest -source:'/mnt/workbench/data/canada_provinces.csv'
 .. _combine:
 
-Combine many cav files line for line
+Combine many csv files line for line
 ------------------------------------
 
 By running that command you can combine two csv files:
 
 .. code-block:: bash
 
+    # Combining line by line
     ./csvtools/csvtools.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
+    # Combining by common id
+    ./csvtools/csvtools.py -task:combine -id:columnname -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
 

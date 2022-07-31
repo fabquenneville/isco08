@@ -4,7 +4,7 @@ Quickstart
 
 .. code-block:: bash
 
-    csvtools [-task:print,print_longest,translate,transcode,combine] [-lang_from:en,fr,...] [-lang_to:en,fr,...] [-keys_from:[,]] [-keys_to:[,]] [-source:] [-sources:[,]] [-destination:]
+    csvtools [-task:combine,print,print_longest,translate,transcode] [-lang_from:en,fr,...] [-lang_to:en,fr,...] [-keys_from:[,]] [-keys_to:[,]] [-source:] [-sources:[,]] [-destination:] [-id:] [-translator:]
 
 ** Warning an empty destination will output in the source and replace it **
 

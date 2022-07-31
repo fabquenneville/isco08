@@ -37,7 +37,7 @@
 <p>The main reasons to use csvtools would be the following:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#translate"><span class="std std-ref">Add a translated column to a csv file</span></a>:</p></li>
-<li><p><a class="reference internal" href="#combine"><span class="std std-ref">Combine many cav files line for line</span></a>:</p></li>
+<li><p><a class="reference internal" href="#combine"><span class="std std-ref">Combine many csv files line for line</span></a>:</p></li>
 <li><p><a class="reference internal" href="#printlongest"><span class="std std-ref">Print the lengths on the longuest values per column</span></a>:</p></li>
 </ul>
 <section id="add-a-translated-column-to-a-csv-file">
@@ -55,10 +55,13 @@
 </pre></div>
 </div>
 </section>
-<section id="combine-many-cav-files-line-for-line">
-<span id="combine"></span><h2>Combine many cav files line for line<a class="headerlink" href="#combine-many-cav-files-line-for-line" title="Permalink to this heading">¶</a></h2>
+<section id="combine-many-csv-files-line-for-line">
+<span id="combine"></span><h2>Combine many csv files line for line<a class="headerlink" href="#combine-many-csv-files-line-for-line" title="Permalink to this heading">¶</a></h2>
 <p>By running that command you can combine two csv files:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./csvtools/csvtools.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Combining line by line</span>
+./csvtools/csvtools.py -task:combine -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
+<span class="c1"># Combining by common id</span>
+./csvtools/csvtools.py -task:combine -id:columnname -sources:~/Documents/titles_english.csv,~/Documents/titles_french.csv -destination:~/Documents/titles.csv
 </pre></div>
 </div>
 </section>
@@ -91,7 +94,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Use cases</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#add-a-translated-column-to-a-csv-file">Add a translated column to a csv file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#print-the-lengths-on-the-longuest-values-per-column">Print the lengths on the longuest values per column</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#combine-many-cav-files-line-for-line">Combine many cav files line for line</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combine-many-csv-files-line-for-line">Combine many csv files line for line</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="errors.html">Errors</a></li>

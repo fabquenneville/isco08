@@ -12,7 +12,7 @@ Synopsis
 
 .. code-block:: bash
 
-    csvtools [-task:print,print_longest,translate,transcode,combine] [-lang_from:en,fr,...] [-lang_to:en,fr,...] [-keys_from:[,]] [-keys_to:[,]] [-source:] [-sources:[,]] [-destination:]
+    csvtools [-task:combine,print,print_longest,translate,transcode] [-lang_from:en,fr,...] [-lang_to:en,fr,...] [-keys_from:[,]] [-keys_to:[,]] [-source:] [-sources:[,]] [-destination:] [-id:] [-translator:]
 
 ** Warning an empty destination will output in the source and replace it **
 
@@ -38,7 +38,7 @@ Options
 
 -task:
 ======
-[print,print_longest,translate,transcode,combine]
+[combine,print,print_longest,translate,transcode]
 
 Transcode will output random encoding to utf-8
 
@@ -69,6 +69,14 @@ A csv list of filepaths to csv files.
 -destination:
 =============
 A filepath to output to.
+
+-id:
+====
+The id to use for trasks like combining csv's.
+
+-translator:
+============
+The translator to use: argos or azure
 
 See :doc:`warnings`
 
