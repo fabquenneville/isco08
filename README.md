@@ -4,11 +4,11 @@ csvtools is a python command line tool
 
 ## Documentation
 
-The documentation is available on the following [link]()
+The documentation is available on [the following page](https://fabquenneville.github.io/csvtools/)
 
 ## Releases
 
-Instalation instructions are found [here]().
+Instalation instructions are found [here](https://fabquenneville.github.io/csvtools/).
 
 ## Usage
 
