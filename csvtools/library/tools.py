@@ -35,6 +35,7 @@ def load_arguments():
         "translator": None,
         "lang_from": None,
         "lang_to": None,
+        "key": None,
         "keys_from": [],
         "keys_to": [],
         "source": None,
@@ -53,6 +54,8 @@ def load_arguments():
             arguments["lang_from"] = arg[11:]
         elif "-lang_to:" in arg:
             arguments["lang_to"] = arg[9:]
+        elif "-key:" in arg:
+            arguments["key"] = arg[5:]
         elif "-keys_from:" in arg:
             arguments["keys_from"] += arg[11:].split(",")
         elif "-keys_to:" in arg:
@@ -68,12 +71,29 @@ def load_arguments():
 
 
 def get_parent(filepath, level=1):
+    '''Return a parent filepath {level} above the {filepath}
+
+    Args:
+        filepath: The starting point filepath
+        level   : How many levels above filepaths should we return
+
+    Returns:
+        string: The requested filepath
+    '''
     if level < 1:
         return os.path.dirname(filepath)
     return get_parent(os.path.dirname(filepath), level - 1)
 
 
 def find_in_parents(file):
+    '''Find a particular file in the parent directories.
+
+    Args:
+        file: The filename we are looking for
+
+    Returns:
+        config: The parsed configuration
+    '''
     if not os.path.exists(file):
         for x in range(3):
             tmpfile = os.path.join(get_parent(__file__, x), file)
@@ -85,7 +105,7 @@ def find_in_parents(file):
 
 
 def load_config(file="config.ini"):
-    '''
+    '''Load the configurations from an ini file
 
     Args:
         file: The config filename
@@ -101,20 +121,41 @@ def load_config(file="config.ini"):
 
 
 def init_argos(from_code, to_code):
+    '''Initialise an Argo translate engine, install the required languages and
+        return the prepared translator engine.
+
+    Args:
+        from_code   : The ISO 639 code for a language to tranlate from: en,fr,es,...
+        to_code     : The ISO 639 code for a language to tranlate to: en,fr,es,...
+
+    Returns:
+        config: A preconfigured Argos translate.Language object
+    '''
     available_packages = argostranslate.package.get_available_packages()
     available_package = list(
         filter(lambda x: x.from_code == from_code and x.to_code == to_code,
                available_packages))[0]
     download_path = available_package.download()
     argostranslate.package.install_from_path(download_path)
-    installed_languages = argostranslate.translate.get_installed_languages()
-    from_lang = list(
-        filter(lambda x: x.code == from_code, installed_languages))[0]
-    to_lang = list(filter(lambda x: x.code == to_code, installed_languages))[0]
+    # installed_languages = argostranslate.translate.get_installed_languages()
+    # from_lang = list(
+    #     filter(lambda x: x.code == from_code, installed_languages))[0]
+    # to_lang = list(filter(lambda x: x.code == to_code, installed_languages))[0]
+    from_lang = argostranslate.translate.get_language_from_code(from_code)
+    to_lang = argostranslate.translate.get_language_from_code(to_code)
     return from_lang.get_translation(to_lang)
 
 
 def diclist_to_csv(diclist, destination, encoding='utf-8'):
+    '''Write a list of dictionaries to a csv file.
+
+    Args:
+        diclist     : A list of dictionaries
+        destination : The filepath of the destination csv.
+        encoding    : The encoding to write the csv file with, defautls to utf-8.
+
+    Returns:
+    '''
     keys = diclist[0].keys()
     with open(destination, 'w', newline="", encoding=encoding) as output_file:
         dict_writer = csv.DictWriter(output_file, keys)
@@ -122,10 +163,21 @@ def diclist_to_csv(diclist, destination, encoding='utf-8'):
         dict_writer.writerows(diclist)
 
 
-def translate_csv_argos(csv_raw, lang_from='en', lang_to='fr', keys={}):
+def translate_diclist_argos(diclist, lang_from='en', lang_to='fr', keys={}):
+    '''Translate a list of dictionaries using argos.
+
+    Args:
+        diclist     : A list of dictionaries
+        lang_from   : The ISO 639 code for a language to tranlate from: en,fr,es,...
+        lang_to     : The ISO 639 code for a language to tranlate to: en,fr,es,...
+        keys        : A dictionary of the keys names to translate from/to {"colen":"colfr",...}
+
+    Returns:
+        list        : diclist with the added translated columns
+    '''
     csv_translated = []
     translator = init_argos(lang_from, lang_to)
-    for data in csv_raw:
+    for data in diclist:
         for k_from, k_to in keys.items():
             if k_from in data:
                 data[k_to] = translator.translate(data[k_from])
@@ -133,7 +185,18 @@ def translate_csv_argos(csv_raw, lang_from='en', lang_to='fr', keys={}):
     return csv_translated
 
 
-def translate_csv_azure(csv_raw, lang_from='en', lang_to='fr', keys={}):
+def translate_diclist_azure(diclist, lang_from='en', lang_to='fr', keys={}):
+    '''Translate a list of dictionaries using azure.
+
+    Args:
+        diclist     : A list of dictionaries
+        lang_from   : The ISO 639 code for a language to tranlate from: en,fr,es,...
+        lang_to     : The ISO 639 code for a language to tranlate to: en,fr,es,...
+        keys        : A dictionary of the keys names to translate from/to {"colen":"colfr",...}
+
+    Returns:
+        list        : diclist with the added translated columns
+    '''
     config = load_config()
     if 'azure' not in config:
         return False
@@ -149,7 +212,7 @@ def translate_csv_azure(csv_raw, lang_from='en', lang_to='fr', keys={}):
     }
 
     csv_translated = []
-    for data in csv_raw:
+    for data in diclist:
         for k_from, k_to in keys.items():
             if k_from in data:
                 body = [{'text': data[k_from]}]
@@ -167,6 +230,19 @@ def translate_csv(source=None,
                   lang_to="en",
                   keys={},
                   translator="argos"):
+    '''Translate a list of dictionaries using {translator}.
+
+    Args:
+        source      : The filepath for the source csv file
+        destination : The filepath for the destination csv file
+        lang_from   : The ISO 639 code for a language to tranlate from: en,fr,es,...
+        lang_to     : The ISO 639 code for a language to tranlate to: en,fr,es,...
+        keys        : A dictionary of the keys names to translate from/to {"colen":"colfr",...}
+        translator  : The engine to use for the translation, defaults to argos (argos, azure)
+
+    Returns:
+        bool        : Success of the operation
+    '''
     arguments = load_arguments()
 
     if arguments['source']:
@@ -198,17 +274,30 @@ def translate_csv(source=None,
     encoding = get_encoding_type(source).lower()
     csv_raw = csv.DictReader(open(source, encoding=encoding))
     if translator == 'azure':
-        csv_translated = translate_csv_azure(csv_raw, lang_from, lang_to, keys)
+        csv_translated = translate_diclist_azure(csv_raw, lang_from, lang_to,
+                                                 keys)
     else:
-        csv_translated = translate_csv_argos(csv_raw, lang_from, lang_to, keys)
+        csv_translated = translate_diclist_argos(csv_raw, lang_from, lang_to,
+                                                 keys)
 
     try:
         diclist_to_csv(csv_translated, destination, encoding)
     except UnicodeEncodeError:
         diclist_to_csv(csv_translated, destination)
+    return True
 
 
 def combine_csvs_lfl(sources, destination):
+    '''Combine two csv files line for line and returns a list of dictionaries.
+
+    Args:
+        sources     : A list of filepaths for the source csv files
+        destination : The filepath for the destination csv file
+
+    Returns:
+        combined_csv    : A list of dictionaries consisting of the combined csv files
+        encoding        : The original encoding for the last source csv file
+    '''
     if not sources:
         return False
     if not destination:
@@ -229,6 +318,17 @@ def combine_csvs_lfl(sources, destination):
 
 
 def combine_csvs_id(sources, destination, id):
+    '''Combine two csv by common id and returns a list of dictionaries.
+
+    Args:
+        sources     : A list of filepaths for the source csv files
+        destination : The filepath for the destination csv file
+        id          : The keyname for the common column
+
+    Returns:
+        combined_csv    : A list of dictionaries consisting of the combined csv files
+        encoding        : The original encoding for the last source csv file
+    '''
     if not sources:
         return False
     if not destination:
@@ -250,10 +350,26 @@ def combine_csvs_id(sources, destination, id):
 
 
 def compare_columns(source=None, keys_from={}, keys_to={}):
+    '''
+
+    Args:
+
+    Returns:
+    '''
     return False
 
 
 def combine_csvs(sources, destination, id=None):
+    '''Combine two csv and returns a list of dictionaries.
+
+    Args:
+        sources     : A list of filepaths for the source csv files
+        destination : The filepath for the destination csv file
+        id          : The keyname for the common column if there is one
+
+    Returns:
+        bool    : The success of the operations
+    '''
     if not sources:
         return False
     if not destination:
@@ -268,10 +384,45 @@ def combine_csvs(sources, destination, id=None):
 
     if combined_csv:
         diclist_to_csv(combined_csv, destination, encoding)
+        return True
+    return False
+
+
+def break_csv(source=None, destination=None, key=None):
+    '''
+
+    Args:
+        source      : The source filepath
+        destination : The destination filepath
+
+    Returns:
+    '''
+
+    if not os.path.isfile(source):
+        return False
+    if not destination:
+        destination = source[:-4]
+    if not key:
+        return False
+
+    encoding = get_encoding_type(source).lower()
+    csv_raw = csv.DictReader(open(source, encoding=encoding))
+    if not csv_raw:
+        return False
+    diclists = {}
+    for d in csv_raw:
+        if not d[key] in diclists:
+            diclists[d[key]] = []
+        diclists[d[key]].append(d)
+
+    for k, v in diclists.items():
+        if not os.path.isdir(destination):
+            os.makedirs(destination)
+        diclist_to_csv(v, os.path.join(destination, f"{k}.csv"), encoding)
 
 
 def print_csv(filepath):
-    '''
+    '''Print a csv file
 
     Args:
         filepath: the filepath of the csv
@@ -286,6 +437,40 @@ def print_csv(filepath):
         open(filepath, encoding=get_encoding_type(filepath).lower()))
     for row in csv_raw:
         print(row)
+
+
+def extract_columns(source, destination, keys_from=None, keys_to=None):
+    '''Exctract columns from source csv and export them to destination.
+
+    Args:
+        sources     : A list of filepaths for the source csv files
+        destination : The filepath for the destination csv file
+        keys_from   : A list of the keys names to translate from
+        keys_to     : A list of the keys names to translate to
+
+    Returns:
+        bool        : The success of the operations
+    '''
+    if not os.path.isfile(source):
+        return False
+    if not len(keys_from) > 0 and not len(keys_to) > 0:
+        return False
+    if not len(keys_from) == len(keys_to):
+        return False
+
+    encoding = get_encoding_type(source).lower()
+    csv_raw = csv.DictReader(open(source, encoding=encoding))
+    if not csv_raw:
+        return False
+
+    diclist = []
+    for d in csv_raw:
+        nd = {}
+        for i in range(len(keys_from)):
+            nd[keys_to[i]] = d[keys_from[i]]
+        diclist.append(nd)
+
+    diclist_to_csv(diclist, destination, encoding)
 
 
 def print_longest(path):

@@ -2,10 +2,10 @@
 
 # Normal import
 try:
-    from csvtools.library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, combine_csvs, transcode, compare_columns, test01
+    from csvtools.library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, combine_csvs, transcode, extract_columns, compare_columns, test01
 # Allow local import for development purposes
 except ModuleNotFoundError:
-    from library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, combine_csvs, transcode, compare_columns, test01
+    from library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, combine_csvs, transcode, extract_columns, compare_columns, test01
 
 
 def main():
@@ -26,6 +26,11 @@ def main():
         transcode(source, destination)
     elif arguments['task'] == "translate":
         translate_csv()
+    elif arguments['task'] == "extract":
+        extract_columns(source, destination, arguments['keys_from'],
+                        arguments['keys_to'])
+    elif arguments['task'] == "break":
+        break_csv(source, destination, arguments['key'])
     elif arguments['task'] == "test":
         test01(source, destination)
 
