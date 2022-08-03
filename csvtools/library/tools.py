@@ -6,6 +6,7 @@
 import configparser
 import os
 import sys
+import copy
 import csv
 import re
 import chardet
@@ -156,11 +157,14 @@ def diclist_to_csv(diclist, destination, encoding='utf-8'):
 
     Returns:
     '''
-    keys = diclist[0].keys()
-    with open(destination, 'w', newline="", encoding=encoding) as output_file:
-        dict_writer = csv.DictWriter(output_file, keys)
-        dict_writer.writeheader()
-        dict_writer.writerows(diclist)
+    try:
+        keys = diclist[0].keys()
+        with open(destination, 'w', newline="", encoding=encoding) as output_file:
+            dict_writer = csv.DictWriter(output_file, keys)
+            dict_writer.writeheader()
+            dict_writer.writerows(diclist)
+    except UnicodeEncodeError:
+        diclist_to_csv(diclist, destination)
 
 
 def translate_diclist_argos(diclist, lang_from='en', lang_to='fr', keys={}):
@@ -280,10 +284,7 @@ def translate_csv(source=None,
         csv_translated = translate_diclist_argos(csv_raw, lang_from, lang_to,
                                                  keys)
 
-    try:
-        diclist_to_csv(csv_translated, destination, encoding)
-    except UnicodeEncodeError:
-        diclist_to_csv(csv_translated, destination)
+    diclist_to_csv(csv_translated, destination, encoding)
     return True
 
 
@@ -323,7 +324,7 @@ def combine_csvs_id(sources, destination, id):
     Args:
         sources     : A list of filepaths for the source csv files
         destination : The filepath for the destination csv file
-        id          : The keyname for the common column
+        id          : The keyname for the unique id column
 
     Returns:
         combined_csv    : A list of dictionaries consisting of the combined csv files
@@ -335,6 +336,8 @@ def combine_csvs_id(sources, destination, id):
         return False
     encoding = 'utf-8'
     combined_csv = {}
+    counta = 0
+    countb = 0
     for source in sources:
         if os.path.isfile(source):
             encoding = get_encoding_type(source).lower()
@@ -343,10 +346,84 @@ def combine_csvs_id(sources, destination, id):
                 if not id in csv_item:
                     break
                 if not csv_item[id] in combined_csv:
+                    counta += 1
                     combined_csv[csv_item[id]] = csv_item
                 else:
+                    countb += 1
                     combined_csv[csv_item[id]] |= csv_item
     return list(combined_csv.values()), encoding
+
+
+def combine_csvs_commons(sources, destination):
+    '''Combine two csv by common column without being unique and returns a list of dictionaries.
+
+    Args:
+        sources     : A list of filepaths for the source csv files
+        destination : The filepath for the destination csv file
+        common          : The keyname for the common column
+
+    Returns:
+        combined_csv    : A list of dictionaries consisting of the combined csv files
+        encoding        : The original encoding for the last source csv file
+    '''
+    if not sources:
+        return False
+    if not destination:
+        return False
+    encoding = 'utf-8'
+    diclist = []
+    keys = ()
+    counta = 0
+    countb = 0
+    for source in sources:
+        if os.path.isfile(source):
+            encoding = get_encoding_type(source).lower()
+            csv_items = list(csv.DictReader(open(source, encoding=encoding)))
+            if len(diclist) < 1:
+                diclist = csv_items
+            else:
+                diclist = fuse_diclists(diclist, csv_items)
+    return diclist, encoding
+
+def fuse_diclists(diclist1, diclist2):
+    if len(diclist1) < 1 or len(diclist2) < 1:
+        return False
+    all_keys, common_keys = get_diclists_keys([diclist1, diclist2])
+
+    diclist = []
+    for dic1 in diclist1:
+        toremove = []
+        resdic = {k:None for k in all_keys}|dic1
+        for i in range(len(diclist2)):
+            for ck in common_keys:
+                if resdic[ck] and ck in diclist2[i] and resdic[ck] == diclist2[i][ck]:
+                    toremove.append(i)
+                    diclist.append(copy.deepcopy(resdic)|diclist2[i])
+            
+        for i in sorted(toremove, reverse=True):
+            del diclist2[i]
+    for dic2 in diclist2:
+        diclist.append({k:None for k in all_keys}|dic2)
+    
+    return diclist
+
+def get_diclists_keys(diclists):
+    '''Combine two csv and returns a list of dictionaries.
+
+    Args:
+        diclists    : A list of lists of dictionaries
+
+    Returns:
+        all_keys, common_keys : The keys
+    '''
+    all_keys = set()
+    common_keys = set()
+    for diclist in diclists:
+        if len(diclists) < 1:
+            continue
+        common_keys = all_keys.intersection(diclist[0].keys())
+        all_keys |= set(diclist[0].keys())
+    return all_keys, common_keys
 
 
 def compare_columns(source=None, keys_from={}, keys_to={}):
@@ -357,6 +434,7 @@ def compare_columns(source=None, keys_from={}, keys_to={}):
     Returns:
     '''
     return False
+
 
 
 def combine_csvs(sources, destination, id=None):
@@ -378,7 +456,15 @@ def combine_csvs(sources, destination, id=None):
     encoding = 'utf-8'
     combined_csv = None
     if not id:
-        combined_csv, encoding = combine_csvs_lfl(sources, destination)
+        diclists = []
+        for source in sources:
+            encoding = get_encoding_type(source).lower()
+            diclists.append(list(csv.DictReader(open(source, encoding=encoding))))
+        all_keys, common_keys = get_diclists_keys(diclists)
+        if len(common_keys) > 0:
+            combined_csv, encoding = combine_csvs_commons(sources, destination)
+        else:
+            combined_csv, encoding = combine_csvs_lfl(sources, destination)
     else:
         combined_csv, encoding = combine_csvs_id(sources, destination, id)
 
@@ -467,7 +553,7 @@ def extract_columns(source, destination, keys_from=None, keys_to=None):
     for d in csv_raw:
         nd = {}
         for i in range(len(keys_from)):
-            nd[keys_to[i]] = d[keys_from[i]]
+            nd[keys_to[i]] = d[keys_from[i]].strip()
         diclist.append(nd)
 
     diclist_to_csv(diclist, destination, encoding)
