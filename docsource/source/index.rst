@@ -1,13 +1,13 @@
-.. csvtools documentation master file, created by
+.. isco08 documentation master file, created by
    sphinx-quickstart on Fri Nov 20 22:46:06 2020.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
 ====================================
-Welcome to csvtools's documentation!
+Welcome to isco08's documentation!
 ====================================
 
-csvtools is a Python command line tool to manipulate csv files.
+isco08 is a Python command line tool to manipulate csv files.
 
 * Print the csv's in the terminal
 * Print the lengths on the longuest values per column
@@ -15,7 +15,7 @@ csvtools is a Python command line tool to manipulate csv files.
 * Combine csv files
 * ...
 
-The source code can be found on `GitHub <https://fabquenneville.github.io/csvtools/>`_
+The source code can be found on `GitHub <https://fabquenneville.github.io/isco08/>`_
 
 .. toctree::
    :maxdepth: 2

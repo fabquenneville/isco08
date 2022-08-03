@@ -2,10 +2,10 @@
 
 # Normal import
 try:
-    from csvtools.library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, combine_csvs, transcode, extract_columns, compare_columns, test01
+    from isco08.library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, convert, combine_csvs, transcode, extract_columns, compare_columns, test01
 # Allow local import for development purposes
 except ModuleNotFoundError:
-    from library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, combine_csvs, transcode, extract_columns, compare_columns, test01
+    from library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, convert, combine_csvs, transcode, extract_columns, compare_columns, test01
 
 
 def main():
@@ -16,6 +16,8 @@ def main():
     if arguments['task'] == "combine":
         id = arguments['id']
         combine_csvs(sources, destination, id)
+    elif arguments['task'] == "convert":
+        convert(sources, destination, arguments['to'])
     elif arguments['task'] == "compare_columns":
         compare_columns(source, destination)
     elif arguments['task'] == "print":

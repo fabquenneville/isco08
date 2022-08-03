@@ -1,14 +1,14 @@
-# csvtools
+# isco08
 
-csvtools is a python command line tool
+isco08 is a python command line tool
 
 ## Documentation
 
-The documentation is available on [the following page](https://fabquenneville.github.io/csvtools/)
+The documentation is available on [the following page](https://fabquenneville.github.io/isco08/)
 
 ## Releases
 
-Instalation instructions are found [here](https://fabquenneville.github.io/csvtools/).
+Instalation instructions are found [here](https://fabquenneville.github.io/isco08/).
 
 ## Usage
 

@@ -20,7 +20,7 @@ import uuid
 # import goslate
 import argostranslate.package
 import argostranslate.translate
-
+import pandas
 
 def load_arguments():
     '''Get/load command parameters
@@ -33,6 +33,7 @@ def load_arguments():
     arguments = {
         "id": None,
         "task": None,
+        "to": None,
         "translator": None,
         "lang_from": None,
         "lang_to": None,
@@ -51,6 +52,8 @@ def load_arguments():
             arguments["task"] = arg[6:]
         elif "-translator:" in arg:
             arguments["translator"] = arg[12:]
+        elif "-to:" in arg:
+            arguments["to"] = arg[4:]
         elif "-lang_from:" in arg:
             arguments["lang_from"] = arg[11:]
         elif "-lang_to:" in arg:
@@ -644,6 +647,52 @@ def move_all_files(source, destination):
             shutil.move(file_from, file_to)
             print('Moved:', file_name)
 
+
+def findfreename(filepath, attempt=0):
+    ''' Given a filepath it will try to find a free filename by appending to the name.
+    First trying as passed in argument, then adding [HEVC] to the end and if all fail [HEVC](#).
+
+    Args:
+        filepath    :   A string containing the full filepath
+        attempt     :   The number of times we have already tryed
+    Returns:
+        filepath    :   The first free filepath we found
+    '''
+    attempt += 1
+    filename = str(filepath)[:str(filepath).rindex(".")]
+    extension = str(filepath)[str(filepath).rindex("."):]
+    copynumpath = filename + f"({attempt})" + extension
+
+    if not os.path.exists(filepath) and attempt <= 2:
+        return filepath
+    elif not os.path.exists(copynumpath):
+        return copynumpath
+    return findfreename(filepath, attempt)
+
+
+def convert(sources, destination=None, to = None):
+    '''
+
+    Args:
+        source      : The source filepath
+        destination : The destination filepath
+
+    Returns:
+    '''
+    if not to:
+        to = "csv"
+    for source in sources:
+        if not os.path.isfile(source):
+            continue
+        filename, file_extension = os.path.splitext(source)
+        file_extension = file_extension.replace(".", "")
+        if not destination:
+            destination = f"{filename}.{to}"
+            destination = findfreename(destination)
+
+        if file_extension in ["xls", "xlsx"] and to == "csv":
+            df = pandas.DataFrame(pandas.read_excel(source))
+            df.to_csv(destination, index = None, header=True)
 
 def test01(source=None, destination=None):
     '''
