@@ -21,6 +21,7 @@ import uuid
 import argostranslate.package
 import argostranslate.translate
 import pandas
+import docx
 
 def load_arguments():
     '''Get/load command parameters
@@ -704,3 +705,55 @@ def test01(source=None, destination=None):
     Returns:
     '''
     print("Testing! Testing!")
+
+def test02(source=None, destination=None):
+    '''
+
+    Args:
+        source      : The source filepath
+        destination : The destination filepath
+
+    Returns:
+    '''
+    basename = os.path.basename(source)
+    filename, file_extension = os.path.splitext(basename)
+    file_extension = file_extension.replace(".", "")
+    doc = docx.Document(source)
+    result = [p.text for p in doc.paragraphs]
+    lines = []
+    for i in range(len(result)):
+        if "\t" in result[i]:
+            result[i] = result[i].replace("\t"," ")
+        if "\n" not in result[i]:
+            lines.append(result[i])
+        else:
+            lines += result[i].split("\n")
+    lines = [line.strip() for line in lines]
+    lines = list(filter(None, lines))
+    categories = {}
+    allitems = {}
+    for line in lines:
+        paterns = {
+            'major': r"(\d) (.+)",
+            'submajor': r"(\d{2}) (.+)",
+            'minor': r"(\d{3}) (.+)",
+            'unit': r"(\d{4}) (.+)",
+        }
+        for catname, patern in paterns.items():
+            if not catname in categories:
+                categories[catname] = {}
+            result = re.match(patern, line)
+            if result and result.group(1) not in categories[catname]:
+                di = {
+                    "isco08":result.group(1),
+                    "category": result.group(2),
+                }
+                categories[catname][result.group(1)] = di
+                allitems[result.group(1)] = di
+    
+    diclist_to_csv(list(allitems.values()), os.path.join(destination, f"{filename}.csv"))
+    for k, v in categories.items():
+        if not os.path.isdir(os.path.join(destination, "categories")):
+            os.makedirs(os.path.join(destination, "categories"))
+        fpath = os.path.join(destination, "categories", f"{k}.csv")
+        diclist_to_csv(list(v.values()), fpath)

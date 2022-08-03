@@ -2,10 +2,10 @@
 
 # Normal import
 try:
-    from isco08.library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, convert, combine_csvs, transcode, extract_columns, compare_columns, test01
+    from isco08.library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, convert, combine_csvs, transcode, extract_columns, compare_columns, test01, test02
 # Allow local import for development purposes
 except ModuleNotFoundError:
-    from library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, convert, combine_csvs, transcode, extract_columns, compare_columns, test01
+    from library.tools import load_arguments, load_config, print_csv, print_longest, translate_csv, break_csv, convert, combine_csvs, transcode, extract_columns, compare_columns, test01, test02
 
 
 def main():
@@ -34,7 +34,8 @@ def main():
     elif arguments['task'] == "break":
         break_csv(source, destination, arguments['key'])
     elif arguments['task'] == "test":
-        test01(source, destination)
+        # test01(source, destination)
+        test02(source, destination)
 
 
 if __name__ == '__main__':
