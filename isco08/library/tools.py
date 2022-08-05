@@ -751,9 +751,9 @@ def test02(source=None, destination=None):
                 categories[catname][result.group(1)] = di
                 allitems[result.group(1)] = di
     
+    if not os.path.isdir(os.path.join(destination, "categories")):
+        os.makedirs(os.path.join(destination, "categories"))
     diclist_to_csv(list(allitems.values()), os.path.join(destination, f"{filename}.csv"))
     for k, v in categories.items():
-        if not os.path.isdir(os.path.join(destination, "categories")):
-            os.makedirs(os.path.join(destination, "categories"))
         fpath = os.path.join(destination, "categories", f"{k}.csv")
         diclist_to_csv(list(v.values()), fpath)

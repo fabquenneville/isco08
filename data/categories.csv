@@ -1,0 +1,620 @@
+code,name_french,name_english
+1,"Directeurs, cadres de direction et gérants",Managers
+2,Professions intellectuelles et scientifiques,Professionals
+3,Professions intermédiaires,Technicians and Associate Professionals
+4,Employés de type administratif,Clerical Support Workers
+5,"Personnel des services directs aux particuliers, commerçants et vendeurs",Services and Sales Workers
+6,"Agriculteurs et ouvriers qualifiés de l'agriculture, de la sylviculture et de la pêche","Skilled Agricultural, Forestry and Fishery Workers"
+7,Métiers qualifiés de l'industrie et de l'artisanat,Craft and Related Trades Workers
+8,"Conducteurs d'installations et de machines, et ouvriers de l'assemblage",Plant and Machine Operators and Assemblers
+9,Professions élémentaires,Elementary Occupations
+0,Professions militaires,Armed Forces Occupations
+11,"Directeurs généraux, cadres supérieurs et membres de l'Exécutif et des corps législatifs","Chief Executives, Senior Officials and Legislators"
+12,Directeurs de services administratifs et commerciaux,Administrative and Commercial Managers
+13,"Directeurs et cadres de direction, production et services spécialisés",Production and Specialized Services Managers
+14,"Directeurs et gérants de l'hôtellerie, la restauration, le commerce et autres services","Hospitality, Retail and Other Services Managers"
+21,Spécialistes des sciences techniques,Science and Engineering Professionals
+22,Spécialistes de la santé,Health Professionals
+23,Spécialistes de l'enseignement,Teaching Professionals
+24,Spécialistes en administration d'entreprises,Business and Administration Professionals
+25,Spécialistes des technologies de l'information et des communications,Information and Communications Technology Professionals
+26,"Spécialistes de la justice, des sciences sociales et de la culture","Legal, Social and Cultural Professionals"
+31,Professions intermédiaires des sciences et techniques,Science and Engineering Associate Professionals
+32,Professions intermédiaires de la santé,Health Associate Professionals
+33,"Professions intermédiaires, finance et administration",Business and Administration Associate Professionals
+34,"Professions intermédiaires des services juridiques, des services sociaux et assimilés","Legal, Social, Cultural and Related Associate Professionals"
+35,Techniciens de l'information et des communications,Information and Communications Technicians
+41,Employés de bureau,General and Keyboard Clerks
+42,"Employés de réception, guichetiers et assimilés",Customer Services Clerks
+43,Employés des services comptables et d'approvisionnement,Numerical and Material Recording Clerks
+44,Autres employés de type administratif,Other Clerical Support Workers
+51,Personnel des services directs aux particuliers,Personal Services Workers
+52,Commerçants et vendeurs,Sales Workers
+53,Personnel soignant,Personal Care Workers
+54,Personnel des services de protection et de sécurité,Protective Services Workers
+61,Agriculteurs et ouvriers qualifiés de l'agriculture commerciale,Market-oriented Skilled Agricultural Workers
+62,"Professions commerciales qualifiées de la sylviculture, de la pêche et de la chasse","Market-oriented Skilled Forestry, Fishery and Hunting Workers"
+63,"Agriculteurs, pêcheurs, chasseurs et cueilleurs de subsistance","Subsistence Farmers, Fishers, Hunters and Gatherers"
+71,"Métiers qualifiés du bâtiment et assimilés, sauf électriciens",Building and Related Trades Workers (excluding Electricians)
+72,"Métiers qualifiés de la métallurgie, de la construction mécanique et assimilés","Metal, Machinery and Related Trades Workers"
+73,Métiers qualifiés de l'artisanat et de l'imprimerie,Handicraft and Printing Workers
+74,Métiers de l'électricité et de l'électrotechnique,Electrical and Electronic Trades Workers
+75,"Métiers de l'alimentation, du travail sur bois, de l'habillement et autres métiers qualifiés de l'industrie et de l'artisanat","Food Processing, Woodworking, Garment and Other Craft and Related Trades Workers"
+81,Conducteurs de machines et d'installations fixes,Stationary Plant and Machine Operators
+82,Ouvriers de l'assemblage,Assemblers
+83,Conducteurs de véhicules et d'engins lourds de levage et de manœuvre,Drivers and  Plant Operators
+91,Aides de ménage,Cleaners and Helpers
+92,"Manœuvres de l'agriculture, de la pêche et de la sylviculture","Agricultural, Forestry and Fishery Labourers"
+93,"Manœuvres des mines, du bâtiment et des travaux publics, des industries manufacturières et des transports","Labourers in Mining, Construction, Manufacturing and Transport"
+94,Assistants de fabrication de l'alimentation,Food Preparation Assistants
+95,Vendeurs ambulants et autres travailleurs des petits métiers des rues et assimilés,Street and Related Sales and Services Workers
+96,Eboueurs et autres travailleurs non qualifiés,Refuse Workers and Other Elementary Workers
+01,Officiers des forces armées,Commissioned Armed Forces Officers
+02,Sous-officiers des forces armées,Non-commissioned Armed Forces Officers
+03,Autres membres des forces armées,"Armed Forces Occupations, Other Ranks"
+111,Membres des corps législatifs et cadres supérieurs de l'administration publique,Legislators and Senior Officials
+112,Directeurs généraux d'entreprise,Managing Directors and Chief Executives
+121,Directeurs  de services administratifs,Business Services and Administration Managers
+122,"Directeurs et cadres de direction, ventes, commercialisation et développement","Sales, Marketing and Development Managers"
+131,"Directeurs et cadres de direction,  agriculture, sylviculture et pêche","Production Managers in Agriculture, Forestry and Fisheries"
+132,"Directeurs et cadres de direction, industries manufacturières, mines, bâtiment et distribution","Manufacturing, Mining, Construction and Distribution Managers"
+133,"Directeurs et cadres de direction, technologies de l'information et des communications",Information and Communications Technology Services Managers
+134,"Cadres de direction, services spécialisés",Professional Services Managers
+141,"Directeurs et gérants, hôtellerie et restauration",Hotel and Restaurant Managers
+142,"Directeurs et gérants, commerce de détail et de gros",Retail and Wholesale Trade Managers
+143,Autres directeurs et gérants,Other Services Managers
+211,"Physiciens, chimistes et assimilés",Physical and Earth Science Professionals
+212,"Mathématiciens, actuaires et statisticiens","Mathematicians, Actuaries and Statisticians"
+213,Spécialistes des sciences de la vie,Life Science Professionals
+214,"Spécialistes, sciences techniques (sauf électrotechniques)",Engineering Professionals (excluding Electrotechnology)
+215,Ingénieurs de l'électrotechnique,Electrotechnology Engineers
+216,"Architectes, urbanistes, géomètres et concepteurs","Architects, Planners, Surveyors and Designers"
+221,Médecins,Medical Doctors
+222,Cadres infirmiers et sages-femmes,Nursing and Midwifery Professionals
+223,Spécialistes des médecines traditionnelles et des médecines complémentaires,Traditional and Complementary Medicine Professionals
+224,Praticiens paramédicaux,Paramedical Practitioners
+225,Vétérinaires,Veterinarians
+226,Autres spécialistes des professions de la santé,Other Health Professionals
+231,Professeurs d'université et d'établissements d'enseignement supérieur,University and Higher Education Teachers
+232,"Professeurs, enseignement technique et professionnel",Vocational Education Teachers
+233,"Professeurs, enseignement secondaire",Secondary Education Teachers
+234,"Instituteurs, enseignement primaire et éducateurs de la petite enfance",Primary School and Early Childhood Teachers
+235,Autres spécialistes de l'enseignement,Other Teaching Professionals
+241,Spécialistes en finances,Finance Professionals
+242,Spécialistes des fonctions administratives,Administration Professionals
+243,"Spécialistes des ventes, de la  commercialisation et des relations publiques","Sales, Marketing and Public Relations Professionals"
+251,Concepteurs et analystes de logiciels et de multimédia,Software and Applications Developers and Analysts
+252,Spécialistes des bases de données et des réseaux d'ordinateurs,Database and Network Professionals
+261,Juristes,Legal Professionals
+262,"Archivistes, bibliothécaires, documentalistes et assimilés","Librarians, Archivists and Curators"
+263,Spécialistes des sciences sociales et du clergé,Social and Religious Professionals
+264,"Auteurs, journalistes et linguistes","Authors, Journalists and Linguists"
+265,Artistes créateurs et exécutants,Creative and Performing Artists
+311,Techniciens des sciences physiques et techniques,Physical and Engineering Science Technicians
+312,"Superviseurs, mines, industries manufacturières et bâtiment","Mining, Manufacturing and Construction Supervisors"
+313,"Techniciens, contrôle de processus industriels",Process Control Technicians
+314,Techniciens et travailleurs assimilés des sciences de la vie,Life Science Technicians and Related Associate Professionals
+315,Contrôleurs et techniciens des moyens de transport maritime et aérien,Ship and Aircraft Controllers and Technicians
+321,Techniciens de la médecine et de la pharmacie,Medical and Pharmaceutical Technicians
+322,Personnel infirmier et sages femmes (niveau intermédiaire),Nursing and Midwifery Associate Professionals
+323,Praticiens des médecines traditionnelles et des médecines complémentaires,Traditional and Complementary Medicine Associate Professionals
+324,Techniciens et assistants vétérinaires,Veterinary Technicians and Assistants
+325,Autres professions intermédiaires de la santé,Other Health Associate Professionals
+331,Professions intermédiaires de la finance et des mathématiques,Financial and Mathematical Associate Professionals
+332,"Agents de vente et d'achat, courtiers",Sales and Purchasing Agents and Brokers
+333,Agents de services commerciaux,Business Services Agents
+334,Secrétaires d'administration et secrétaires spécialisés,Administrative and Specialized Secretaries
+335,Professions intermédiaires de l'application de la loi et assimilées,Government regulatory associate professionals
+341,"Professions intermédiaires des services juridiques, des services sociaux et des religions","Legal, Social and Religious Associate Professionals"
+342,Travailleurs du secteur des sports et des activités de remise en forme,Sports and Fitness Workers
+343,"Professions intermédiaires de la culture, de la création artistique et des activités culinaires","Artistic, Cultural and Culinary Associate Professionals"
+351,"Techniciens, opérations et soutien aux utilisateurs des technologies de l'information et des communications",Information and Communications Technology Operations and User Support Technicians
+352,Techniciens des télécommunications et de la radio diffusion,Telecommunications and Broadcasting Technicians
+411,"Employés de bureau, fonctions générales",General Office Clerks
+412,Secrétaires (fonctions générales),Secretaries (general)
+413,Opérateurs sur clavier,Keyboard Operators
+421,"Guichetiers, encaisseurs et assimilés","Tellers, Money Collectors and Related Clerks"
+422,Employés chargés d'informer la clientèle,Client Information Workers
+431,Employés des services comptables et financiers,Numerical Clerks
+432,"Employés d'approvisionnement, d'ordonnancement et des transports",Material recording and Transport Clerks
+441,Autres employés de type administratif,Other Clerical Support Workers
+511,Agents d'accompagnement et assimilés (transports et tourisme),"Travel Attendants, Conductors and Guides"
+512,Cuisiniers,Cooks
+513,Serveurs et barmen,Waiters and Bartenders
+514,"Coiffeurs, esthéticiens et assimilés","Hairdressers, Beauticians and Related Workers"
+515,"Intendants, gouvernantes et concierges",Building and Housekeeping Supervisors
+516,Autre personnel des services directs aux particuliers,Other Personal Services Workers
+521,Vendeurs sur les marchés et vendeurs ambulants de comestibles,Street and Market Salespersons
+522,"Commerçants et vendeurs, magasins",Shop Salespersons
+523,Caissiers et billettistes,Cashiers and Ticket Clerks
+524,Autres vendeurs,Other Sales Workers
+531,Gardes d'enfants et aides-enseignants,Child Care Workers and Teachers’ Aides
+532,Aides-soignants,Personal Care Workers in Health Services
+541,Personnel des services de protection et de sécurité,Protective Services Workers
+611,"Agriculteurs et ouvriers qualifiés, cultures commerciales",Market Gardeners and Crop Growers
+612,Eleveurs et ouvriers qualifiés de l'élevage commercial et assimilés,Animal Producers
+613,Agriculteurs et ouvriers qualifiés des cultures et de l'élevage à but commercial,Mixed Crop and Animal Producers
+621,Professions de la sylviculture et assimilées,Forestry and Related Workers
+622,"Pêcheurs, chasseurs et trappeurs","Fishery Workers, Hunters and Trappers"
+631,"Agriculteurs, subsistance",Subsistence Crop Farmers
+632,"Eleveurs de bétail, subsistance",Subsistence Livestock Farmers
+633,"Agriculteurs et éleveurs, subsistance",Subsistence Mixed Crop and Livestock Farmers
+634,"Pêcheurs, chasseurs, trappeurs et cueilleurs, subsistance","Subsistence Fishers, Hunters, Trappers and Gatherers"
+711,Métiers qualifiés du bâtiment (gros oeuvre) et assimilés,Building Frame and Related Trades Workers
+712,Métiers qualifiés du bâtiment (finitions) et assimilés,Building Finishers and Related Trades Workers
+713,"Ouvriers peintres, ravaleurs de façades et assimilés","Painters, Building Structure Cleaners and Related Trades Workers"
+721,"Mouleurs de fonderie, soudeurs, tôliers-chaudronniers, monteurs de charpentes métalliques et assimilés","Sheet and Structural Metal Workers, Moulders and Welders, and Related Workers"
+722,"Forgerons, outilleurs et assimilés","Blacksmiths, Toolmakers and Related Trades Workers"
+723,Mécaniciens et réparateurs de machines,Machinery Mechanics and Repairers
+731,Métiers de l'artisanat,Handicraft Workers
+732,Métiers de l'imprimerie,Printing Trades Workers
+741,"Installateurs et réparateurs, équipements électriques",Electrical Equipment Installers and Repairers
+742,"Monteurs et réparateurs, électronique et télécommunications",Electronics and Telecommunications Installers and Repairers
+751,Métiers qualifiés de l'alimentation et assimilés,Food Processing and Related Trades Workers
+752,"Métiers qualifiés du traitement du bois, ébénistes et assimilés","Wood Treaters, Cabinet-makers and Related Trades Workers"
+753,Métiers qualifiés de l'habillement et assimilés,Garment and Related Trades Workers
+754,Autres métiers qualifiés de l'industrie et de l'artisanat,Other Craft and Related Workers
+811,Conducteurs d'installations d'exploitation minière et d'extraction des minéraux,Mining and Mineral Processing Plant Operators
+812,Conducteurs d'installations de transformation et de traitement superficiel des métaux,Metal Processing and Finishing Plant Operators
+813,Conducteurs d'installations et de machines pour la fabrication des produits chimiques et photographiques,Chemical and Photographic Products Plant and Machine Operators
+814,"Conducteurs de machines pour la fabrication de produits en caoutchouc, en matières plastiques et en papeterie","Rubber, Plastic and Paper Products Machine Operators"
+815,Conducteurs de machines pour la fabrication de produits textiles et d'articles en fourrure et en cuir,"Textile, Fur and Leather Products Machine Operators"
+816,Conducteurs de machines pour la fabrication de denrées alimentaires et de produits connexes,Food and Related Products Machine Operators
+817,Conducteurs d'installations pour la fabrication du papier et pour le travail du bois,Wood Processing and Papermaking Plant Operators
+818,Autres conducteurs de machines et d'installations fixes,Other Stationary Plant and Machine Operators
+821,Ouvriers de l'assemblage,Assemblers
+831,Conducteurs de locomotives et assimilés,Locomotive Engine Drivers and Related Workers
+832,"Conducteurs d'automobiles, de camionnettes et de motocycles","Car, Van and Motorcycle Drivers"
+833,Conducteurs de poids lourds et d'autobus,Heavy Truck and Bus Drivers
+834,Conducteurs de matériels et engins mobiles,Mobile Plant Operators
+835,Matelots de pont et assimilés,Ships’ Deck Crews and Related Workers
+911,Aides de ménage et agents d'entretien à domicile et dans les hôtels et bureaux,"Domestic, Hotel and Office Cleaners and Helpers"
+912,"Laveurs de véhicules et de vitres, laveurs de linge et autres nettoyeurs manuels","Vehicle, Window, Laundry and Other Hand Cleaning Workers"
+921,"Manœuvres de l'agriculture, de la pêche et de la sylviculture","Agricultural, Forestry and Fishery Labourers"
+931,"Manœuvres des mines, du bâtiment et des travaux publics",Mining and Construction Labourers
+932,Manœuvres des industries manufacturières,Manufacturing Labourers
+933,Manœuvres des transports et de l'entreposage,Transport and Storage Labourers
+941,Assistants de fabrication de l'alimentation,Food Preparation Assistants
+951,Travailleurs des petits métiers des rues et assimilés,Street and Related Services Workers
+952,Vendeurs ambulants (à l'exception de l'alimentation),Street Vendors (excluding Food)
+961,Eboueurs,Refuse Workers
+962,Autres professions élémentaires,Other Elementary Workers
+011,Officiers des forces armées,Commissioned Armed Forces Officers
+021,Sous-officiers des forces armées,Non-commissioned Armed Forces Officers
+031,Autres membres des forces armées,"Armed Forces Occupations, Other Ranks"
+1111,Membres des corps législatifs,Legislators
+1112,Cadres supérieurs de l'administration publique,Senior Government Officials
+1113,Chefs traditionnels et chefs de village,Traditional Chiefs and Heads of Villages
+1114,Dirigeants et cadres supérieurs d'organisations spécialisées,Senior Officials of Special-interest Organizations
+1120,Directeurs généraux d’entreprise,Managing Directors and Chief Executives
+1211,"Directeurs et cadres de direction, services financiers",Finance Managers
+1212,"Directeurs et cadres de direction, ressources humaines",Human Resource Managers
+1213,"Directeurs et cadres de direction, stratégie et planifications",Policy and Planning Managers
+1219,Directeurs des services administratifs non classés ailleurs,Business Services and Administration Managers Not Elsewhere Classified
+1221,"Directeurs et cadres de direction, ventes et commercialisation",Sales and Marketing Managers
+1222,"Directeurs et cadres de direction, publicité et relations publiques",Advertising and Public Relations Managers
+1223,"Directeurs et cadres de direction, recherche-développement",Research and Development Managers
+1311,"Directeurs et cadres de direction,  agriculture et sylviculture",Agricultural and Forestry Production Managers
+1312,"Directeurs et cadres de direction, aquaculture et pêche",Aquaculture and Fisheries Production Managers
+1321,"Directeurs et cadres de direction, industrie manufacturière",Manufacturing Managers
+1322,"Directeurs et cadres de direction, mines",Mining Managers
+1323,"Directeurs et cadres de direction, bâtiment",Construction Managers
+1324,"Directeurs et cadres de direction, approvisionnement, distribution et assimilés","Supply, Distribution and Related Managers"
+1330,"Directeurs et cadres de direction, technologies de l'information et des communications",Information and Communications Technology Services Managers
+1341,"Cadres de direction, garde d'enfants",Child Care Services Managers
+1342,"Cadres de direction, services de santé",Health Services Managers
+1343,"Cadres de direction, services aux personnes âgées",Aged Care Services Managers
+1344,"Cadres de direction, services sociaux",Social Welfare Managers
+1345,"Cadres de direction, éducation",Education Managers
+1346,"Directeurs et cadres de direction, succursales de banque, services financiers et assurances",Financial and Insurance Services Branch Managers
+1349,"Autres cadres de direction, services spécialisés non classés ailleurs",Professional Services Managers Not Elsewhere Classified
+1411,"Directeurs et gérants, hôtellerie",Hotel Managers
+1412,"Directeurs et gérants, restauration",Restaurant Managers
+1420,"Directeurs et gérants, commerce de détail et de gros",Retail and Wholesale Trade Managers
+1431,"Directeurs et gérants, centres sportifs, centres de loisirs et centres culturels","Sports, Recreation and Cultural Centre Managers"
+1439,"Directeurs et gérants, services non classés ailleurs",Services Managers Not Elsewhere Classified
+2111,Physiciens et astronomes,Physicists and Astronomers
+2112,Météorologues,Meteorologists
+2113,Chimistes,Chemists
+2114,Géologues et géophysiciens,Geologists and Geophysicists
+2120,"Mathématiciens, actuaires et statisticiens","Mathematicians, Actuaries and Statisticians"
+2131,"Biologistes, botanistes, zoologistes et assimilés","Biologists, Botanists, Zoologists and Related Professionals"
+2132,Agronomes et assimilés,"Farming, Forestry and Fisheries Advisers"
+2133,Spécialistes de la protection de l'environnement,Environmental Protection Professionals
+2141,"Spécialistes, sciences techniques de la production et de l'industrie",Industrial and Production Engineers
+2142,Ingénieurs civils,Civil Engineers
+2143,Ingénieurs écologistes,Environmental Engineers
+2144,Ingénieurs mécaniciens,Mechanical Engineers
+2145,Ingénieurs chimistes,Chemical Engineers
+2146,"Ingénieurs des mines, ingénieurs métallurgistes et assimilés","Mining Engineers, Metallurgists and Related Professionals"
+2149,"Spécialistes, sciences techniques non classés ailleurs",Engineering Professionals Not Elsewhere Classified
+2151,Ingénieurs électriciens,Electrical Engineers
+2152,Ingénieurs électroniciens,Electronics Engineers
+2153,Spécialistes des télécommunications,Telecommunications Engineers
+2161,"Architectes, bâtiment",Building Architects
+2162,Architectes paysagistes,Landscape Architects
+2163,Concepteurs modélistes de produits et de vêtements,Product and Garment Designers
+2164,Urbanistes et ingénieurs de la circulation routière,Town and Traffic Planners
+2165,Cartographes et géomètres,Cartographers and Surveyors
+2166,"Concepteurs graphiques, multimédia - graphistes",Graphic and Multimedia Designers
+2211,Médecins généralistes,Generalist Medical Practitioners
+2212,Médecins spécialistes,Specialist Medical Practitioners
+2221,Cadres infirmiers,Nursing Professionals
+2222,Sages-femmes,Midwifery Professionals
+2230,Spécialistes des médecines traditionnelles et des médecines complémentaires,Traditional and Complementary Medicine Professionals
+2240,Praticiens paramédicaux,Paramedical Practitioners
+2250,Vétérinaires,Veterinarians
+2261,Dentistes,Dentists
+2262,Pharmaciens,Pharmacists
+2263,"Spécialistes de la salubrité de l'environnement, de l'hygiène et de la santé au travail",Environmental and Occupational Health and Hygiene Professionals
+2264,Physiothérapeutes,Physiotherapists
+2265,Diététiciens et spécialistes de la nutrition,Dieticians and Nutritionists
+2266,Audiologistes et orthophonistes,Audiologists and Speech Therapists
+2267,Optométristes,Optometrists and Ophthalmic Opticians
+2269,Spécialistes de la santé non classés ailleurs,Health Professionals Not Elsewhere Classified
+2310,Professeurs d'université et d'établissements d'enseignement supérieur,University and Higher Education Teachers
+2320,"Professeurs, enseignement technique et professionnel",Vocational Education Teachers
+2330,"Professeurs, enseignement secondaire",Secondary Education Teachers
+2341,"Instituteurs, enseignement primaire",Primary School Teachers
+2342,Educateurs de la petite enfance,Early Childhood Educators
+2351,Spécialistes des méthodes d'enseignement,Education Methods specialists
+2352,"Enseignants, éducation spécialisée",Special Needs Teachers
+2353,Autres professeurs de langues,Other Language Teachers
+2354,Autres professeurs de musique,Other Music Teachers
+2355,Autres professeurs de disciplines artistiques,Other Arts Teachers
+2356,Formateurs en technologies de l'information,Information Technology Trainers
+2359,"Spécialistes de l'enseignement, non classés ailleurs",Teaching Professionals Not Elsewhere Classified
+2411,Cadres comptables,Accountants
+2412,Conseillers en finances et investissements,Financial and Investment Advisers
+2413,Analystes financiers,Financial Analysts
+2421,"Analystes, gestion et organisation",Management and Organization Analysts
+2422,"Spécialistes, administration et politiques",Policy Administration Professionals
+2423,"Spécialistes, ressources humaines et évolution de carrière",Personnel and Careers Professionals
+2424,Spécialistes de la formation du personnel,Training and Staff Development Professionals
+2431,Spécialistes de la publicité et de la commercialisation,Advertising and Marketing Professionals
+2432,Spécialistes des relations publiques,Public Relations Professionals
+2433,"Spécialistes des ventes, secteurs médical et technique (à l'exception des TIC)",Technical and Medical Sales Professionals (excluding ICT)
+2434,"Spécialistes des ventes, technologies de l'information et des communications",Information and Communications Technology Sales Professionals
+2511,Analystes de systèmes,Systems Analysts
+2512,Concepteurs de logiciels,Software Developers
+2513,Concepteurs de sites Internet et de multimédia,Web and Multimedia Developers
+2514,Programmeurs d'applications,Applications Programmers
+2519,"Concepteurs et analystes de logiciels, et concepteurs de multimédia non classés ailleurs",Software and Applications Developers and Analysts Not Elsewhere Classified
+2521,Spécialistes des bases de données,Database Designers and Administrators
+2522,Administrateurs de systèmes,Systems Administrators
+2523,Spécialistes des réseaux d'ordinateurs,Computer Network Professionals
+2529,Spécialistes des bases de données et des réseaux d'ordinateurs non classés ailleurs,Database and Network Professionals Not Elsewhere Classified
+2611,Avocats,Lawyers
+2612,Magistrats,Judges
+2619,Juristes non classés ailleurs,Legal Professionals Not Elsewhere Classified
+2621,Archivistes paléographes et conservateurs de musée,Archivists and Curators
+2622,"Bibliothécaires, documentalistes et professions assimilées",Librarians and Related Information Professionals
+2631,Economistes,Economists
+2632,"Sociologues, anthropologues et assimilés","Sociologists, Anthropologists and Related Professionals"
+2633,"Philosophes, historiens et spécialistes des sciences politiques","Philosophers, Historians and Political Scientists"
+2634,Psychologues,Psychologists
+2635,Spécialistes du travail social,Social Work and Counselling Professionals
+2636,Ministres des cultes,Religious Professionals
+2641,Auteurs et autres écrivains,Authors and Related Writers
+2642,Journalistes,Journalists
+2643,"Traducteurs, interprètes et linguistes","Translators, Interpreters and Other Linguists"
+2651,Artistes plasticiens,Visual Artists
+2652,"Compositeurs, musiciens et chanteurs","Musicians, Singers and Composers"
+2653,Danseurs et chorégraphes,Dancers and Choreographers
+2654,"Metteurs en scène de cinéma, de théâtre et d'autres spectacles","Film, Stage and Related Directors and Producers"
+2655,Acteurs,Actors
+2656,"Annonceurs-présentateurs de radio, de télévision et autres médias","Announcers on Radio, Television and Other Media"
+2659,Artistes créateurs et exécutants non classés ailleurs,Creative and Performing Artists Not Elsewhere Classified
+3111,Techniciens des sciences chimiques et physiques,Chemical and Physical Science Technicians
+3112,Techniciens du génie civil,Civil Engineering Technicians
+3113,Techniciens en électricité,Electrical Engineering Technicians
+3114,Techniciens en électronique,Electronics Engineering Technicians
+3115,Techniciens en construction mécanique,Mechanical Engineering Technicians
+3116,Techniciens en chimie industrielle,Chemical Engineering Technicians
+3117,"Techniciens des mines, techniciens métallurgistes",Mining and Metallurgical Technicians
+3118,Dessinateurs industriels,Draughtspersons
+3119,Techniciens des sciences physiques et techniques non classés ailleurs,Physical and Engineering Science Technicians Not Elsewhere Classified
+3121,"Superviseurs, mines",Mining Supervisors
+3122,"Superviseurs, industries manufacturières",Manufacturing Supervisors
+3123,"Superviseurs, bâtiment",Construction Supervisors
+3131,Conducteurs d'installations de production d'énergie,Power Production Plant Operators
+3132,Conducteurs d'incinérateurs et d'installations de traitement de l'eau,Incinerator and Water Treatment Plant Operators
+3133,Conducteurs d'installations de traitement chimique,Chemical Processing Plant Controllers
+3134,Conducteurs d'installations de raffinage de pétrole et de gaz naturel,Petroleum and Natural Gas Refining Plant Operators
+3135,"Contrôleurs des processus industriels, métallurgie",Metal Production Process Controllers
+3139,"Techniciens, contrôle de processus industriels non classés ailleurs",Process Control Technicians Not Elsewhere Classified
+3141,Techniciens des sciences de la vie (à l'exception de la médecine),Life Science Technicians (excluding Medical)
+3142,"Techniciens, agriculture et élevage",Agricultural Technicians
+3143,"Techniciens, sylviculture",Forestry Technicians
+3151,Officiers mécaniciens de navires,Ships’ Engineers
+3152,Officiers de pont et pilotes,Ships’ Deck Officers and Pilots
+3153,Pilotes d'avions et assimilés,Aircraft Pilots and Related Associate Professionals
+3154,Contrôleurs de la circulation aérienne,Air Traffic Controllers
+3155,Techniciens de la sécurité aérienne,Air Traffic Safety Electronics Technicians
+3211,Techniciens d'appareils électromédicaux,Medical Imaging and Therapeutic Equipment Technicians
+3212,Techniciens de laboratoire médical,Medical and Pathology Laboratory Technicians
+3213,Techniciens et assistants pharmaciens et préparateurs en pharmacie,Pharmaceutical Technicians and Assistants
+3214,Techniciens de prothèses médicales et dentaires,Medical and Dental Prosthetic Technicians
+3221,Personnel infirmier (niveau intermédiaire),Nursing Associate Professionals
+3222,Sages-femmes (niveau intermédiaire),Midwifery Associate Professionals
+3230,Praticiens des médecines traditionnelles et des médecines complémentaires,Traditional and Complementary Medicine Associate Professionals
+3240,Techniciens et assistants vétérinaires,Veterinary Technicians and Assistants
+3251,Assistants et thérapeutes en médecine dentaire,Dental Assistants and Therapists
+3252,Techniciens de dossiers médicaux,Medical Records and Health Information Technicians
+3253,Agents de santé communautaire,Community Health Workers
+3254,Opticiens,Dispensing Opticians
+3255,Techniciens et assistants en physiothérapie,Physiotherapy Technicians and Assistants
+3256,Assistants médicaux,Medical Assistants
+3257,"Inspecteurs, salubrité de l'environnement et de la santé au travail, et assimilés",Environmental and Occupational Health Inspectors and Associates
+3258,Ambulanciers,Ambulance Workers
+3259,Professions intermédiaires de la santé non classées ailleurs,Health Associate Professionals Not Elsewhere Classified
+3311,Courtiers en valeurs et cambistes,Securities and Finance Dealers and Brokers
+3312,Responsables des prêts,Credit and Loans Officers
+3313,Professions intermédiaires de la comptabilité,Accounting Associate Professionals
+3314,"Professions intermédiaires de la statistique , des mathématiques et assimilées","Statistical, Mathematical and Related Associate Professionals"
+3315,Commissaires-priseurs et autres experts en évaluation,Valuers and Loss Assessors
+3321,Agents d'assurances,Insurance Representatives
+3322,Représentants et techniciens commerciaux,Commercial Sales Representatives
+3323,Acheteurs,Buyers
+3324,Courtiers en marchandises,Trade Brokers
+3331,Agents concessionnaires,Clearing and Forwarding Agents
+3332,Organisateurs de conférences et d'événements,Conference and Event Planners
+3333,Agents d'emploi et de recrutement de main-d'œuvre,Employment Agents and Contractors
+3334,Agents immobiliers,Real Estate Agents and Property Managers
+3339,Agents de services commerciaux non classés ailleurs,Business Services Agents Not Elsewhere Classified
+3341,"Superviseurs, travail de bureau",Office Supervisors
+3342,"Secrétaires, services juridiques",Legal Secretaries
+3343,Secrétaires d'administration et secrétaires exécutifs,Administrative and Executive Secretaries
+3344,Secrétaires médicaux/ales,Medical Secretaries
+3351,Inspecteurs des douanes et des frontières,Customs and Border Inspectors
+3352,Contrôleurs des impôts,Government Tax and Excise Officials
+3353,Agents des services publics accordant des prestations sociales,Government Social Benefits Officials
+3354,Agents des services publics accordant des permis et des licences,Government Licensing Officials
+3355,Inspecteurs et enquêteurs de police,Police Inspectors and Detectives
+3359,Professions intermédiaires de l'application de la loi et  assimilées non classées ailleurs,Government Regulatory Associate Professionals Not Elsewhere Classified
+3411,Professions juridiques intermédiaires et assimilées,Legal and Related Associate Professionals
+3412,Professions intermédiaires du travail social,Social Work Associate Professionals
+3413,Professions intermédiaires des religions,Religious Associate Professionals
+3421,Athlètes et sportifs de compétition,Athletes and Sports Players
+3422,Entraîneurs sportifs et arbitres de sport,"Sports Coaches, Instructors and Officials"
+3423,"Instructeurs et animateurs de programmes, loisirs et activités de remise en forme",Fitness and Recreation Instructors and Programme Leaders
+3431,Photographes,Photographers
+3432,Décorateurs et designers d'intérieurs,Interior Designers and Decorators
+3433,"Techniciens de galeries d'art, de musées et de bibliothèques","Gallery, Museum and Library Technicians"
+3434,Chefs cuisiniers,Chefs
+3435,Autres professions intermédiaires de la culture et de la création artistique,Other Artistic and Cultural Associate Professionals
+3511,"Techniciens des technologies de l'information et des communications, opérations",Information and Communications Technology Operations Technicians
+3512,"Techniciens des technologies de l'information et des communications, soutien aux utilisateurs",Information and Communications Technology User Support Technicians
+3513,"Techniciens, réseaux et systèmes d'ordinateurs",Computer Network and Systems Technicians
+3514,Techniciens de l'Internet,Web Technicians
+3521,Techniciens de radio-télévision et d'enregistrement audio-visuel,Broadcasting and Audiovisual Technicians
+3522,Techniciens de télécommunications,Telecommunications Engineering Technicians
+4110,"Employés de bureau, fonctions générales",General Office Clerks
+4120,Secrétaires (fonctions générales),Secretaries (general)
+4131,Dactylographes et opérateurs de traitement de texte,Typists and Word Processing Operators
+4132,Opérateurs sur clavier numérique,Data Entry Clerks
+4211,Guichetiers de banque et assimilés,Bank Tellers and Related Clerks
+4212,Croupiers et assimilés dans le secteur des jeux de hasard,"Bookmakers, Croupiers and Related Gaming Workers"
+4213,Prêteurs sur gages et bailleurs de fonds,Pawnbrokers and Money-lenders
+4214,Encaisseurs et assimilés,Debt Collectors and Related Workers
+4221,Consultants et employés d'agence de voyages,Travel Consultants and Clerks
+4222,Employés de centre d'appel,Contact Centre Information Clerks
+4223,Téléphonistes-standardistes,Telephone Switchboard Operators
+4224,"Réceptionnistes, hôtellerie",Hotel Receptionists
+4225,"Employés, service d'information",Inquiry Clerks
+4226,Réceptionnistes (fonctions générales),Receptionists (general)
+4227,"Intervieweurs, enquêtes et études de marché",Survey and Market Research Interviewers
+4229,Employés chargés d'informer la clientèle non classés ailleurs,Client Information Workers Not Elsewhere Classified
+4311,Aides comptables et teneurs de livres,Accounting and Bookkeeping Clerks
+4312,Employés de services statistiques ou financiers,"Statistical, Finance and Insurance Clerks"
+4313,"Commis, service de paie",Payroll Clerks
+4321,Employés du service des stocks,Stock Clerks
+4322,Employés du service d'ordonnancement de la production,Production Clerks
+4323,Employés du service des transports,Transport Clerks
+4411,Employés de bibliothèque,Library Clerks
+4412,Employés de service du courrier,Mail Carriers and Sorting Clerks
+4413,"Codeurs, correcteurs d'épreuves et assimilés","Coding, Proofreading and Related Clerks"
+4414,Ecrivains publics et assimilés,Scribes and Related Workers
+4415,Classeurs-archivistes,Filing and Copying Clerks
+4416,"Employés, service du personnel",Personnel Clerks
+4419,Employés administratifs non classés ailleurs,Clerical Support Workers Not Elsewhere Classified
+5111,Agents d'accueil et stewards,Travel Attendants and Travel Stewards
+5112,Contrôleurs et receveurs de transports publics,Transport Conductors
+5113,Guides,Travel Guides
+5120,Cuisiniers, Cooks
+5131,Serveurs,Waiters
+5132,Barmen,Bartenders
+5141,Coiffeurs,Hairdressers
+5142,Esthéticiens et assimilés,Beauticians and Related Workers
+5151,"Intendants et superviseurs des services de nettoyage de bureaux, des hôtels et d'autres établissements","Cleaning and Housekeeping Supervisors in Offices, Hotels and Other Establishments"
+5152,Gouvernantes et intendants à domicile,Domestic Housekeepers
+5153,Concierges,Building Caretakers
+5161,"Astrologues, diseurs de bonne aventure et assimilés","Astrologers, Fortune-tellers and Related Workers"
+5162,Personnel de compagnie et valets de chambre,Companions and Valets
+5163,Agents de pompes funèbres et embaumeurs,Undertakers and Embalmers
+5164,Toiletteurs et gardiens d'animaux,Pet Groomers and Animal Care Workers
+5165,Moniteurs d'auto-école,Driving Instructors
+5169,"Personnel des services directs aux particuliers, non classé ailleurs",Personal Services Workers Not Elsewhere Classified
+5211,Vendeurs à l'étal et sur les marchés,Stall and Market Salespersons
+5212,Vendeurs ambulants de comestibles,Street Food Salespersons
+5221,"Commerçants, magasins",Shopkeepers
+5222,"Superviseurs, magasins",Shop Supervisors
+5223,"Vendeurs, magasin",Shop Sales Assistants
+5230,Caissiers et billettistes,Cashiers and Ticket Clerks
+5241,Mannequins et autres modèles,Fashion and Other Models
+5242,Démonstrateurs en magasin,Sales Demonstrators
+5243,Vendeurs au porte à porte,Door-to-door Salespersons
+5244,Télévendeurs,Contact Centre Salespersons
+5245,Pompistes,Service Station Attendants
+5246,"Commis au comptoir, restauration rapide",Food Service Counter Attendants
+5249,Vendeurs non classés ailleurs,Sales Workers Not Elsewhere Classified
+5311,Gardes d'enfants,Child Care Workers
+5312,Aides-enseignants,Teachers’ Aides
+5321,Aides-soignants en institution,Health Care Assistants
+5322,Aides-soignants à domicile,Home-based Personal Care Workers
+5329,"Personnel soignant et assimilé, non classé ailleurs",Personal Care Workers in Health Services Not Elsewhere Classified
+5411,Pompiers,Firefighters
+5412,Agents de police,Police Officers
+5413,Gardiens de prison,Prison Guards
+5414,Agents de sécurité,Security Guards
+5419,"Personnel des services de protection et de sécurité, non classé ailleurs",Protective Services Workers Not Elsewhere Classified
+6111,"Agriculteurs et ouvriers qualifiés, cultures de plein champ",Field Crop and Vegetable Growers
+6112,Arboriculteurs et ouvriers qualifiés de l'arboriculture,Tree and Shrub Crop Growers
+6113,Agriculteurs et ouvriers qualifiés de l'horticulture et des pépinières,Gardeners; Horticultural and Nursery Growers
+6114,"Agriculteurs et ouvriers qualifiés, cultures diversifiées",Mixed Crop Growers
+6121,Eleveurs et ouvriers qualifiés de l'élevage de bétail,Livestock and Dairy Producers
+6122,Aviculteurs et ouvriers qualifiés de l'aviculture,Poultry Producers
+6123,"Apiculteurs, sériciculteurs et ouvriers qualifiés de l'apiculture et de la sériciculture",Apiarists and Sericulturists
+6129,"Eleveurs et ouvriers qualifiés de l'élevage commercial et assimilés, non classés ailleurs",Animal Producers Not Elsewhere Classified
+6130,Agriculteurs et ouvriers qualifiés des cultures et de l'élevage à but commercial,Mixed Crop and Animal Producers
+6210,Exploitants et ouvriers forestiers,Forestry and Related Workers
+6221,Aquaculteurs et ouvriers de l'aquaculture,Aquaculture Workers
+6222,Pêcheurs de la pêche côtière et en eaux intérieures,Inland and Coastal Waters Fishery Workers
+6223,Pêcheurs de la pêche en haute mer,Deep-sea Fishery Workers
+6224,Chasseurs et trappeurs,Hunters and Trappers
+6310,"Agriculteurs, subsistance",Subsistence Crop Farmers
+6320,"Eleveurs de bétail, subsistance",Subsistence Livestock Farmers
+6330,"Agriculteurs et éleveurs, subsistance",Subsistence Mixed Crop and Livestock Farmers
+6340,"Pêcheurs, chasseurs, trappeurs et cueilleurs, subsistance","Subsistence Fishers, Hunters, Trappers and Gatherers"
+7111,Constructeurs de maisons,House Builders
+7112,Maçons,Bricklayers and Related Workers
+7113,Fendeurs et tailleurs de pierre,"Stonemasons, Stone Cutters, Splitters and Carvers"
+7114,"Constructeurs en béton armé, maçons ragréeurs et assimilés","Concrete Placers, Concrete Finishers and Related Workers"
+7115,Charpentiers en bois et menuisiers du bâtiment,Carpenters and Joiners
+7119,Métiers qualifiés du bâtiment (gros oeuvre) et assimilés non classés ailleurs,Building Frame and Related Trades Workers Not Elsewhere Classified
+7121,Couvreurs et zingueurs,Roofers
+7122,Poseurs de revêtements de sol et carreleurs,Floor Layers and Tile Setters
+7123,Plâtriers,Plasterers
+7124,Monteurs en isolation thermique et acoustique,Insulation Workers
+7125,Vitriers,Glaziers
+7126,Plombiers et tuyauteurs,Plumbers and Pipe Fitters
+7127,Mécaniciens-installateurs réfrigération et climatisation,Air Conditioning and Refrigeration Mechanics
+7131,Peintres en bâtiment et poseurs de papiers peints,Painters and Related Workers
+7132,"Laqueurs, vernisseurs et assimilés",Spray Painters and Varnishers
+7133,Ravaleurs de façades et ramoneurs,Building Structure Cleaners
+7211,Mouleurs et noyauteurs de fonderie,Metal Moulders and Coremakers
+7212,Soudeurs et oxycoupeurs,Welders and Flame Cutters
+7213,Tôliers-chaudronniers,Sheet Metal Workers
+7214,Charpentiers métalliers et monteurs de charpentes métalliques,Structural Metal Preparers and Erectors
+7215,Gréeurs et épisseurs de câbles,Riggers and Cable Splicers
+7221,"Forgerons, estampeurs et conducteurs de presses à forger","Blacksmiths, Hammersmiths and Forging Press Workers"
+7222,Outilleurs et assimilés,Toolmakers and Related Workers
+7223,Régleurs et conducteurs de machines-outils,Metal Working Machine Tool Setters and Operators
+7224,"Meuleurs, polisseurs et affûteurs","Metal Polishers, Wheel Grinders and Tool Sharpeners"
+7231,Mécaniciens et réparateurs de véhicules à moteur,Motor Vehicle Mechanics and Repairers
+7232,Mécaniciens et réparateurs de moteurs d'avion,Aircraft Engine Mechanics and Repairers
+7233,Mécaniciens et réparateurs de machines agricoles et industrielles,Agricultural and Industrial Machinery Mechanics and Repairers
+7234,Réparateurs de bicyclettes et assimilés,Bicycle and Related Repairers
+7311,Mécaniciens-réparateurs d'instruments de précision,Precision-instrument Makers and Repairers
+7312,Facteurs et accordeurs d'instruments de musique,Musical Instrument Makers and Tuners
+7313,Joailliers et orfèvres,Jewellery and Precious Metal Workers
+7314,Potiers et assimilés (produits céramiques et abrasifs),Potters and Related Workers
+7315,"Souffleurs, mouleurs, tailleurs, meuleurs et polisseurs de verre","Glass Makers, Cutters, Grinders and Finishers"
+7316,"Peintres d'enseignes, peintres-décorateurs et graveurs","Signwriters, Decorative Painters, Engravers and Etchers"
+7317,Métiers de l'artisanat sur bois et sur des matériaux similaires,"Handicraft Workers in Wood, Basketry and Related Materials"
+7318,"Métiers de l'artisanat sur textile, sur cuir et sur des matériaux similaires","Handicraft Workers in Textile, Leather and Related Materials"
+7319,Métiers de l'artisanat non classés ailleurs,Handicraft Workers Not Elsewhere Classified
+7321,Compositeurs et préparateurs en forme imprimante et assimilés,Pre-press Technicians
+7322,Imprimeurs,Printers
+7323,Relieurs et assimiles,Print Finishing and Binding Workers
+7411,Electriciens du bâtiment et assimilés,Building and Related Electricians
+7412,Mécaniciens et ajusteurs d'appareils électriques,Electrical Mechanics and Fitters
+7413,Monteurs et réparateurs de lignes électriques,Electrical Line Installers and Repairers
+7421,Mécaniciens et réparateurs d'appareils électroniques,Electronics Mechanics and Servicers
+7422,"Monteurs et réparateurs, technologies de l'information et des communications",Information and Communications Technology Installers and Servicers
+7511,"Bouchers, poissonniers et assimilés","Butchers, Fishmongers and Related Food Preparers"
+7512,"Boulangers, pâtissiers et confiseurs","Bakers, Pastry-cooks and Confectionery Makers"
+7513,Fabricants des produits laitiers,Dairy Products Makers
+7514,"Conserveurs de fruits, de légumes et assimilés","Fruit, Vegetable and Related Preservers"
+7515,Dégustateurs et classeurs de denrées alimentaires et de boissons,Food and Beverage Tasters and Graders
+7516,Métiers qualifiés de la préparation du tabac et de la fabrication des produits du tabac,Tobacco Preparers and Tobacco Products Makers
+7521,Métiers qualifiés du traitement du bois,Wood Treaters
+7522,"Ebénistes, menuisiers et assimilés",Cabinet-makers and Related Workers
+7523,Régleurs et conducteurs de machines à bois,Woodworking Machine Tool Setters and Operators
+7531,"Tailleurs, couturiers, fourreurs, modistes et chapeliers","Tailors, Dressmakers, Furriers and Hatters"
+7532,Métiers qualifiés de la coupe de vêtements et assimilés,Garment and Related Patternmakers and Cutters
+7533,"Couseurs, brodeurs et assimilés","Sewing, Embroidery and Related Workers"
+7534,Tapissiers et assimilés,Upholsterers and Related Workers
+7535,"Tanneurs, peaussiers et mégissiers","Pelt Dressers, Tanners and Fellmongers"
+7536,Cordonniers et assimilés,Shoemakers and Related Workers
+7541,Scaphandriers et plongeurs,Underwater Divers
+7542,Boutefeux,Shotfirers and Blasters
+7543,Classeurs et essayeurs de produits (à l'exception des aliments et des boissons),Product Graders and Testers (excluding Foods and Beverages)
+7544,Fumigateurs et préposés au contrôle de la vermine et des mauvaises herbes,Fumigators and Other  and Weed Controllers
+7549,Métiers qualifiés de l'industrie et de l'artisanat non classés ailleurs,Craft and Related Workers Not Elsewhere Classified
+8111,Mineurs et conducteurs d'installations de mine,Miners and Quarriers
+8112,Conducteurs d'installations de préparation des minerais et de la roche,Mineral and Stone Processing Plant Operators
+8113,"Foreurs, sondeurs de puits et assimilés",Well Drillers and Borers and Related Workers
+8114,"Conducteurs de machines à fabriquer du ciment, de la pierre et d'autres produits minéraux","Cement, Stone and Other Mineral Products Machine Operators"
+8121,Conducteurs d'installations de transformation et de traitement des métaux,Metal Processing Plant Operators
+8122,Conducteurs d'installations de traitement superficiel des métaux,"Metal Finishing, Plating and Coating Machine Operators"
+8131,Conducteurs d'installations et de machines de traitement chimique,Chemical Products Plant and Machine Operators
+8132,Conducteurs de machines pour la fabrication des produits photographiques,Photographic Products Machine Operators
+8141,Conducteurs de machines pour la fabrication des produits en caoutchouc,Rubber Products Machine Operators
+8142,Conducteurs de machines pour la fabrication de produits en matières plastiques,Plastic Products Machine Operators
+8143,Conducteurs de machines de papeterie,Paper Products Machine Operators
+8151,"Conducteurs de machines à préparer les fibres, à filer et à bobiner","Fibre Preparing, Spinning and Winding Machine Operators"
+8152,Conducteurs de métiers mécaniques à tisser et à tricoter,Weaving and Knitting Machine Operators
+8153,Conducteurs de machines à coudre,Sewing Machine Operators
+8154,"Conducteurs de machines à blanchir, à teindre et à nettoyer les tissus","Bleaching, Dyeing and Fabric Cleaning Machine Operators"
+8155,Conducteurs de machines à préparer les fourrures et le cuir,Fur and Leather Preparing Machine Operators
+8156,Conducteurs de machines pour la fabrication des chaussures et assimilés,Shoemaking and Related Machine Operators
+8157,Conducteurs de machines de blanchisserie,Laundry Machine Operators
+8159,"Conducteurs de machines pour la fabrication de produits textiles et d'articles en fourrure et en cuir, non classés ailleurs","Textile, Fur and Leather Products Machine Operators Not Elsewhere Classified"
+8160,Conducteurs de machines pour la fabrication de denrées alimentaires et de produits connexes,Food and Related Products Machine Operators
+8171,Conducteurs d'installations pour la fabrication du papier et de la pâte à papier,Pulp and Papermaking Plant Operators
+8172,Conducteurs d'installations pour le travail du bois,Wood Processing Plant Operators
+8181,Conducteurs d'installations de verrerie et de céramique,Glass and Ceramics Plant Operators
+8182,Chauffeurs de machines à vapeur et de chaudières,Steam Engine and Boiler Operators
+8183,"Conducteurs de machines d'emballage, d'embouteillage et d'étiquetage","Packing, Bottling and Labelling Machine Operators"
+8189,Conducteurs de machines et d'installations fixes non classés ailleurs,Stationary Plant and Machine Operators Not Elsewhere Classified
+8211,Monteurs en construction mécanique,Mechanical Machinery Assemblers
+8212,Monteurs d'appareils électriques et électroniques,Electrical and Electronic Equipment Assemblers
+8219,Monteurs et assembleurs non classés ailleurs,Assemblers Not Elsewhere Classified
+8311,Conducteurs de locomotives,Locomotive Engine Drivers
+8312,"Serre-freins, aiguilleurs et agents de manœuvre","Railway Brake, Signal and Switch Operators"
+8321,Conducteurs de motocycles,Motorcycle Drivers
+8322,Chauffeurs de taxi et conducteurs d'automobiles et de camionnettes,"Car, Taxi and Van Drivers"
+8331,Conducteurs d'autobus et de tramways,Bus and Tram Drivers
+8332,Conducteurs de poids lourds et de camions,Heavy Truck and Lorry Drivers
+8341,Conducteurs d'engins mobiles agricoles et forestiers,Mobile Farm and Forestry Plant Operators
+8342,Conducteurs d'engins de terrassement et de matériels similaires,Earthmoving and Related Plant Operators
+8343,"Conducteurs de grues, d'engins de levage divers et de matériels similaires","Crane, Hoist and Related Plant Operators"
+8344,Conducteurs de chariots élévateurs,Lifting Truck Operators
+8350,Matelots de pont et assimilés,Ships’ Deck Crews and Related Workers
+9111,Aides de ménage à domicile,Domestic Cleaners and Helpers
+9112,"Agents d'entretien dans les bureaux, les hôtels et autres établissements","Cleaners and Helpers in Offices, Hotels and Other Establishments"
+9121,Laveurs et repasseurs de linge à la main,Hand Launderers and Pressers
+9122,Laveurs de véhicules,Vehicle Cleaners
+9123,Laveurs de vitres,Window Cleaners
+9129,Autres nettoyeurs,Other Cleaning Workers
+9211,Manœuvres de l'agriculture,Crop Farm Labourers
+9212,Manœuvres de l'élevage,Livestock Farm Labourers
+9213,Manœuvres de l'agriculture et de l'élevage,Mixed Crop and Livestock Farm Labourers
+9214,"Manœuvres, cultures maraîchères et horticulture",Garden and Horticultural Labourers
+9215,Manœuvres forestiers,Forestry Labourers
+9216,Manœuvres pêcheurs et aquaculteurs,Fishery and Aquaculture Labourers
+9311,Manœuvres des mines et des carrières,Mining and Quarrying Labourers
+9312,Manœuvres de chantier de travaux publics,Civil Engineering Labourers
+9313,Manœuvres du bâtiment,Building Construction Labourers
+9321,Emballeurs à la main et autres manœuvres des industries manufacturières,Hand Packers
+9329,Manœuvres des industries manufacturières non classés ailleurs,Manufacturing Labourers Not Elsewhere Classified
+9331,Conducteurs de véhicules à bras et à pédales,Hand and Pedal Vehicle Drivers
+9332,Conducteurs de véhicules et de machines à traction animale,Drivers of Animal-drawn Vehicles and Machinery
+9333,Manutentionnaires,Freight Handlers
+9334,Garnisseurs de rayons,Shelf Fillers
+9411,"Cuisiniers, restauration rapide",Fast Food Preparers
+9412,Aides de cuisine,Kitchen Helpers
+9510,Travailleurs des petits métiers des rues et assimilés,Street and Related Services Workers
+9520,Vendeurs ambulants (à l'exception de l'alimentation),Street Vendors (excluding Food)
+9611,"Manœuvres, enlèvement des ordures et matériel recyclable",Garbage and Recycling Collectors
+9612,Trieurs de déchets,Refuse Sorters
+9613,Balayeurs et manœuvres assimilés,Sweepers and Related Labourers
+9621,"Messagers, porteurs de bagages et livreurs de colis","Messengers, Package Deliverers and Luggage Porters"
+9622,Manœuvres polyvalents,Odd-job Persons
+9623,Encaisseurs de distributeurs automatiques à prépaiement et releveurs de compteurs,Meter Readers and Vending-machine Collectors
+9624,Porteurs d'eau et ramasseurs de bois de feu,Water and Firewood Collectors
+9629,Professions élémentaires non classés ailleurs,Elementary Workers Not Elsewhere Classified
+0110,Officiers des forces armées,Commissioned Armed Forces Officers
+0210,Sous-officiers des forces armées,Non-commissioned Armed Forces Officers
+0310,Autres membres des forces armées,"Armed Forces Occupations, Other Ranks"
